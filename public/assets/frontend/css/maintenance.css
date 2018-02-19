@@ -1,0 +1,73 @@
+#maintenance {
+  background: #eaeaea;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden; }
+  #maintenance .head {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0px;
+    margin-bottom: 0px;
+    background: #f7cd68;
+    color: white;
+    font-weight: 700; }
+  #maintenance .content {
+    background-image: url("../images/maintenance-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    height: 100%;
+    position: relative; }
+    #maintenance .content hr.small {
+      border-bottom: 5px solid #f7cd68;
+      width: 100px;
+      margin-bottom: 40px; }
+    #maintenance .content .box {
+      width: 100%;
+      padding-top: 70px; }
+    #maintenance .content .logo {
+      width: 500px;
+      margin-bottom: 75px; }
+    #maintenance .content .title {
+      color: #f7cd68;
+      font-size: 33px;
+      font-weight: 700; }
+    #maintenance .content .subtitle {
+      width: 50%;
+      font-size: 20px;
+      color: white;
+      margin: auto;
+      margin-bottom: 70px; }
+    #maintenance .content .circle {
+      cursor: pointer;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid;
+      font-size: 50px;
+      margin-bottom: 30px;
+      background: #f7cd68;
+      border-color: #f7cd68;
+      transition: all 0.5s ease; }
+      #maintenance .content .circle .fa {
+        color: white;
+        transition: all 0.5s ease; }
+    #maintenance .content .info {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 50px; }
+
+@media only screen and (max-width: 500px) {
+  #maintenance {
+    overflow-y: unset; }
+    #maintenance .content {
+      height: auto; }
+      #maintenance .content .subtitle {
+        width: 90%; } }
+
+/*# sourceMappingURL=maintenance.css.map */

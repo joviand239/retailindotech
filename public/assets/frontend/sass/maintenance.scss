@@ -1,0 +1,104 @@
+#maintenance {
+  background: #eaeaea;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+
+
+  .head {
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0px;
+    margin-bottom: 0px;
+    background: #f7cd68;
+    color: white;
+    font-weight: 700;
+  }
+
+  .content {
+    background-image: url("../images/maintenance-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    height: 100%;
+    position: relative;
+
+    hr.small {
+      border-bottom: 5px solid #f7cd68;
+      width: 100px;
+      margin-bottom: 40px;
+    }
+
+    .box {
+      width: 100%;
+      padding-top: 70px;
+    }
+
+    .logo {
+      width: 500px;
+      margin-bottom: 75px;
+    }
+
+    .title {
+      color: #f7cd68;
+      font-size: 33px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      width: 50%;
+      font-size: 20px;
+      color: white;
+      margin: auto;
+      margin-bottom: 70px;
+    }
+
+
+    .circle {
+      cursor: pointer;
+      width: 150px;
+      height: 150px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid;
+      font-size: 50px;
+      margin-bottom: 30px;
+      background: #f7cd68;
+      border-color: #f7cd68;
+      transition: all 0.5s ease;
+
+      .fa {
+        color: white;
+        transition: all 0.5s ease;
+      }
+    }
+
+    .info {
+      font-size: 18px;
+      color: white;
+      margin-bottom: 50px;
+    }
+
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  #maintenance {
+    overflow-y: unset;
+
+    .content {
+      height: auto;
+
+      .subtitle {
+        width: 90%;
+      }
+    }
+
+  }
+}
