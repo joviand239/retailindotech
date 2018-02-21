@@ -1,0 +1,21 @@
+.btn {
+  width: 150px;
+  font-weight: 700;
+  @include transition(all, 0.5s, ease);
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover{
+    transform: scaleX(1.1);
+  }
+
+}
+
+
+.secondary-btn {
+  background: $secondary-color;
+  color: $main-color;
+}

@@ -81,10 +81,13 @@
     .info {
       font-size: 18px;
       color: white;
-      margin-bottom: 50px;
     }
 
   }
+}
+
+#body-maintenance {
+  overflow: hidden;
 }
 
 
@@ -98,7 +101,14 @@
       .subtitle {
         width: 90%;
       }
-    }
 
+      .info {
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  #body-maintenance {
+    overflow: auto;
   }
 }

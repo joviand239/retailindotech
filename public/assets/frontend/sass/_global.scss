@@ -2,6 +2,7 @@
 
 @import 'base/variables';
 @import 'base/mixin';
+@import 'button';
 
 html, body {
   background-color: $background;
@@ -9,8 +10,100 @@ html, body {
   height: 100%;
   overflow-x: hidden;
   font-family: 'Roboto';
+  color: $body-color;
+  font-size: 14px;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.secondary-color {
+  color: $secondary-color;
 }
 
 img {
   width: 100%;
 }
+
+a {
+  color: $body-color;
+  @include transition(color, 0.5s, ease);
+
+  &:hover {
+    color: rgba($body-color, 0.7);
+
+  }
+
+}
+
+
+.navbar {
+  box-shadow: 0px 1px 20px 0px #898989;
+
+  .navbar-brand {
+    width: 15%;
+    text-align: center;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  .navbar-nav {
+
+    .nav-link {
+      padding-right: 20px;
+      padding-left: 20px;
+      @include transition(all, 0.5s, ease);
+
+      &:hover {
+        background: $main-color;
+        color: white;
+      }
+    }
+
+    .active {
+
+      .nav-link {
+        background: $main-color;
+        color: white;
+      }
+
+    }
+
+  }
+
+}
+
+
+#footer-top {
+  padding: 30px 0px;
+  background: $main-color;
+  color: white;
+
+  .icon {
+    width: 150px;
+    margin-bottom: 10px;
+  }
+
+  .head-title {
+    margin-bottom: 20px;
+    color: $secondary-color;
+  }
+}
+
+#footer-btm {
+  padding: 15px;
+  background: $secondary-color;
+  color: $main-color;
+  text-align: center;
+
+  .copyright {
+    margin: 0px;
+    font-weight: 700;
+  }
+
+}
+
+

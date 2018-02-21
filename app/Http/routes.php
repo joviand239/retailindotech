@@ -37,6 +37,8 @@ Route::group(['middleware' => ['authweb'], 'roles'=>['CUSTOMER', 'CUSTOMERBIZ'],
 
 Route::get('/', 'Frontend\HomeController@getMaintenance')->name('maintenance');
 
+Route::get('/home', 'Frontend\HomeController@index')->name('home');
+
 
 
 

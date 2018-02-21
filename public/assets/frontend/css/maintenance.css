@@ -59,8 +59,10 @@
         transition: all 0.5s ease; }
     #maintenance .content .info {
       font-size: 18px;
-      color: white;
-      margin-bottom: 50px; }
+      color: white; }
+
+#body-maintenance {
+  overflow: hidden; }
 
 @media only screen and (max-width: 500px) {
   #maintenance {
@@ -68,6 +70,11 @@
     #maintenance .content {
       height: auto; }
       #maintenance .content .subtitle {
-        width: 90%; } }
+        width: 90%; }
+      #maintenance .content .info {
+        margin-bottom: 50px; }
+
+  #body-maintenance {
+    overflow: auto; } }
 
 /*# sourceMappingURL=maintenance.css.map */
