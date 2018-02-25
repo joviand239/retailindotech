@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse" id="main-navbar">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
+                    <a class="nav-link" href="#">Tentang Kami</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Produk</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Layanan</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tentang Kami</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Berita</a>

@@ -1,5 +1,43 @@
 #home {
-  padding: 150px 0px;
 
+  .banner {
+    position: relative;
+
+    .lSSlideOuter .lSPager.lSpg {
+      position: absolute;
+      width: 100%;
+      bottom: 15px;
+
+      &>li {
+
+        a {
+          background-color: white;
+          width: 30px;
+          height: 5px;
+        }
+
+        &.active a {
+          background-color: $secondary-color;
+        }
+
+        &:hover a {
+          background-color: $secondary-color;
+        }
+      }
+    }
+
+
+  }
+
+
+  .about-title {
+    text-align: right;
+    font-size: 40px;
+    color: $main-color;
+  }
+
+  .sec-line {
+    border-top: 4px solid $secondary-color;
+  }
 
 }

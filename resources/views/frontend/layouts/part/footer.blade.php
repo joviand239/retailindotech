@@ -77,11 +77,12 @@
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn secondary-btn">
-                            KIRIM
+                        <button type="submit" class="btn secondary-btn ladda-button" data-style="zoom-in">
+                            <span class="ladda-label">KIRIM</span>
                         </button>
                     </div>
                 </form>
+
 
 
             </div>
@@ -93,7 +94,7 @@
 
     <div class="container">
         <p class="copyright">
-            © Hak Cipta 2018 PT. Retailindo Technology. Hak Cipta dilindungi Undang-undang
+            © Hak Cipta 2018 PT. Retailindo Technology. Hak Cipta dilindungi Undang-undang.
         </p>
     </div>
 

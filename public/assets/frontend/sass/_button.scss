@@ -7,15 +7,58 @@
     outline: none;
     box-shadow: none;
   }
-
-  &:hover{
-    transform: scaleX(1.1);
-  }
-
 }
 
 
 .secondary-btn {
   background: $secondary-color;
   color: $main-color;
+
+  &:hover {
+    background: rgba($secondary-color, .6);
+    color: $main-color;
+  }
+}
+
+
+.link-btn {
+  color: $main-color;
+}
+
+.arrow-btn {
+
+  .fa {
+    font-size: 40px;
+    color: $main-color;
+    @include transition(all, 0.5s, ease);
+
+    &:hover {
+      color: $main-color;
+      transform: scaleX(1.2);
+    }
+  }
+
+}
+
+
+.link-btn {
+  color: $secondary-color;
+
+  &:hover {
+    color: $secondary-color;
+  }
+
+}
+
+.cta-btn {
+  padding: 25px;
+  background: $main-color;
+  color: white;
+  font-weight: 700;
+  @include transition(all, 0.5s, ease);
+
+  &:hover {
+    transform: scale(1.1);
+    color: white;
+  }
 }
