@@ -21,6 +21,12 @@ html, body {
     font-size: 40px;
     color: $main-color;
   }
+
+  .small-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $main-color;
+  }
 }
 
 .head {
@@ -69,6 +75,13 @@ a {
 
 hr {
   margin: 30px 0px;
+
+  &.sec-small {
+    width: 100px;
+    margin: 20px 0px;
+    border-color: $secondary-color;
+    border-width: 3px;
+  }
 }
 
 .navbar {
@@ -279,6 +292,32 @@ hr {
       overflow: hidden;
       text-overflow: ellipsis;
     }
+  }
+
+}
+
+
+.page-banner {
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  min-height: 350px;
+  @extend .display-flex;
+  align-items: center;
+
+  hr {
+    margin: auto;
+    width: 150px;
+    border-color: $secondary-color;
+    border-width: 4px;
+    margin-top: 15px;
+  }
+
+  .page-title {
+    color: white;
+    text-align: center;
+    font-size: 38px;
+    text-transform: uppercase;
   }
 
 }

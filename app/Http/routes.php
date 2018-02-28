@@ -39,6 +39,10 @@ Route::get('/', 'Frontend\HomeController@getMaintenance')->name('maintenance');
 
 Route::get('/home', 'Frontend\HomeController@index')->name('home');
 
+Route::get('/tentang-kami', 'Frontend\AboutController@index')->name('about');
+
+Route::get('/kontak-kami', 'Frontend\ContactController@index')->name('contact');
+
 
 
 

@@ -124,7 +124,7 @@
                             yang sudah terbukti berkualitas, inovatif dan penyedia fasilitas informasi yang terlengkap
                         </p>
 
-                        <a href="#" class="arrow-btn"><i class="fa fa-long-arrow-right"></i></a>
+                        <a href="{!! route('about') !!}" class="arrow-btn"><i class="fa fa-long-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
@@ -298,6 +298,7 @@
                             </div>
 
                             <div class="detail-wrapper">
+                                <p class="date">29 February 2018</p>
                                 <a href="#">
                                     <h3 class="title">
                                         Teknis dan Cara Kerja Mesin Sidik Jari
@@ -322,6 +323,7 @@
                             </div>
 
                             <div class="detail-wrapper">
+                                <p class="date">29 February 2018</p>
                                 <a href="#">
                                     <h3 class="title">
                                         Cara Kerja Sistem Pengenal Wajah (Face Recognition)
@@ -346,6 +348,7 @@
                             </div>
 
                             <div class="detail-wrapper">
+                                <p class="date">29 February 2018</p>
                                 <a href="#">
                                     <h3 class="title">
                                         Perkembangan Mesin Absen Teknologi Manual Hingga Fingerprint
@@ -372,7 +375,7 @@
                         <h2 class="subtitle">Silahkan hubungi kami atau klik tombol ini.</h2>
                     </div>
 
-                    <a href="#" class="cta-btn">
+                    <a href="{!! route('contact') !!}" class="cta-btn">
                         KONTAK KAMI
                     </a>
                 </div>
