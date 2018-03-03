@@ -4,6 +4,7 @@
 use \App\Entity\Order;
 use \App\Entity\User\Customer;
 use \App\Util\Constant;
+use \App\Entity\Product;
 
 function getPriceNumberWithComa($value) {
     if (empty($value)) {
@@ -223,6 +224,15 @@ function getOrderStatusName($name) {
     ];
 
     return $map[$name];
+}
+
+
+function GetProductList() {
+    $map = [];
+    foreach(Product::all() as $item){
+        $map[$item->id] = $item->name;
+    }
+    return $map;
 }
 
 

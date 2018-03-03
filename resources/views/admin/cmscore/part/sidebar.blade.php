@@ -22,6 +22,24 @@
                     </ul>
                 </div>
             </li>
+
+            <li class="dropdown {!! isActiveRoute(['admin.products']) !!}" >
+                <a href="{!! route('admin.products') !!}">
+                    <div class="icon">
+                        <i class="fa fa-archive" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Product</div>
+                </a>
+            </li>
+
+            <li class="dropdown {!! isActiveRoute(['admin.items']) !!}" >
+                <a href="{!! route('admin.items') !!}">
+                    <div class="icon">
+                        <i class="fa fa-cubes" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Item</div>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>

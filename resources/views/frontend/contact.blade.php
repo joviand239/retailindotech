@@ -32,13 +32,13 @@
 
                         <form>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="name" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control custom" name="name" placeholder="Nama Lengkap">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" name="email" placeholder="Email">
+                                <input type="email" class="form-control custom" name="email" placeholder="Email">
                             </div>
                             <div class="form-group">
-                                <textarea rows="5" class="form-control" name="message" placeholder="Pesan"></textarea>
+                                <textarea rows="5" class="form-control custom" name="message" placeholder="Pesan"></textarea>
                             </div>
 
                             <div class="form-group">

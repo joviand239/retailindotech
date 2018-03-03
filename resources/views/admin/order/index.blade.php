@@ -14,7 +14,7 @@
             <div class="card">
                 <div class="card-header card-header-add ">
                     <span>{{ $title }}</span>
-                    {{--<a type="button" class="btn btn-success btn-xs pull-right" href=" {{ url('/admin/ordertion/0') }}">
+                    {{--<a product="button" class="btn btn-success btn-xs pull-right" href=" {{ url('/admin/ordertion/0') }}">
                         <i class="icon fa fa-plus"></i>
                         <span class="help-text">Buat Order Baru</span>
                     </a>--}}

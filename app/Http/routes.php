@@ -1,5 +1,7 @@
 <?php
 
+use WVI\CMSCore\Facades\CMSCore;
+
 Route::group(['prefix'=>'admin'], function () {
 	Route::get('/reset', 'Admin\UserController@reset');
 	Route::auth();
@@ -16,15 +18,23 @@ Route::group(['prefix'=>'admin'], function () {
 		Route::get('/user/{id?}', 'Admin\AdminController@details')->name('user');
 		Route::post('/user/{id?}', 'Admin\AdminController@save' );
 
-		Route::get('/cms/{type}/{subtype?}', 'CMSCore\Admin\CMSController@index');
-		Route::get('/cms/details/{type}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@details');
-		Route::post('/cms/details/{type}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@save');
-		Route::get('/cms/delete/{type}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@delete');
+		Route::get('/cms/{product}/{subtype?}', 'CMSCore\Admin\CMSController@index');
+		Route::get('/cms/details/{product}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@details');
+		Route::post('/cms/details/{product}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@save');
+		Route::get('/cms/delete/{product}/{subtype}/{id?}', 'CMSCore\Admin\CMSController@delete');
 
 		Route::get('/orders/{status}/{customer}', 'Admin\OrderController@index')->name('orders');
 		Route::get('/order/{id?}', 'Admin\OrderController@details')->name('order');
 		Route::post('/order/{id?}', 'Admin\OrderController@save');
 		Route::get('/order/delete/{id?}', 'Admin\OrderController@delete');
+
+
+		CMSCore::CRUDRoute('product', 'products');
+        CMSCore::CRUDRoute('item', 'items');
+
+        Route::get('/product/{productId?}/category/details/{categoryId?}', 'Admin\CategoryController@details')->name('admin.category-details');
+        Route::post('/product/{productId?}/category/{categoryId?}', 'Admin\CategoryController@save')->name('admin.category-save');
+        Route::get('/product/{productId?}/category/{categoryId?}', 'Admin\CategoryController@delete')->name('admin.category-delete');
 
 	});
 });

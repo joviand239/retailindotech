@@ -17,6 +17,6 @@ class AttributeRoleScope implements Scope {
 
 
 	public function apply(Builder $builder, Model $model) {
-		$builder->where(['type'=>$this->type, 'subtype'=>$this->subtype]);
+		$builder->where(['product'=>$this->type, 'subtype'=>$this->subtype]);
 	}
 }

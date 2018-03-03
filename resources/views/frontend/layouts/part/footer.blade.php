@@ -60,26 +60,15 @@
             </div>
 
             <div class="col-md-4">
-                <h2 class="head-title">Kontak Kami</h2>
+                <h2 class="head-title">Subscribe</h2>
 
 
                 <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Nama Lengkap">
-                    </div>
-
-                    <div class="form-group">
+                    <div class="form-group input-group">
                         <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-
-                    <div class="form-group">
-                        <textarea rows="5" class="form-control" name="message" placeholder="Pesan"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="btn secondary-btn ladda-button" data-style="zoom-in">
-                            <span class="ladda-label">KIRIM</span>
-                        </button>
+                        <span class="input-group-btn">
+                            <button class="btn secondary-btn inline ladda-button" data-style="zoom-in" type="submit">KIRIM</button>
+                       </span>
                     </div>
                 </form>
 

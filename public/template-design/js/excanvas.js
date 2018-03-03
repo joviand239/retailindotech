@@ -746,7 +746,7 @@ if (!document.createElement('canvas').getContext) {
 
       // When colors attribute is used, the meanings of opacity and o:opacity2
       // are reversed.
-      lineStr.push('<g_vml_:fill type="', fillStyle.type_, '"',
+      lineStr.push('<g_vml_:fill product="', fillStyle.type_, '"',
                    ' method="none" focus="100%"',
                    ' color="', color1, '"',
                    ' color2="', color2, '"',

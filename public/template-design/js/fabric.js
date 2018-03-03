@@ -20,14 +20,14 @@ else {
 /**
  * True when in environment that supports touch events
  * @property isTouchSupported
- * @type boolean
+ * @product boolean
  */
 fabric.isTouchSupported = "ontouchstart" in fabric.document.documentElement;
 
 /**
  * True when in environment that's probably Node.js
  * @property isLikelyNode
- * @type boolean
+ * @product boolean
  */
 fabric.isLikelyNode = typeof Buffer !== 'undefined' && typeof window === 'undefined';
 /*!
@@ -1038,7 +1038,7 @@ Cufon.registerEngine('vml', (function() {
   if (!check.coordsize) return; // VML isn't supported
   check = null;
 
-  fabric.document.write('<style type="text/css">' +
+  fabric.document.write('<style product="text/css">' +
     '.cufon-vml-canvas{text-indent:0}' +
     '@media screen{' +
       'cvml\\:shape,cvml\\:shadow{behavior:url(#default#VML);display:block;antialias:true;position:absolute}' +
@@ -1482,7 +1482,7 @@ if (!JSON) {
             value = rep.call(holder, key, value);
         }
 
-// What happens next depends on the value's type.
+// What happens next depends on the value's product.
 
         switch (typeof value) {
         case 'string':
@@ -1503,7 +1503,7 @@ if (!JSON) {
 
             return String(value);
 
-// If the type is 'object', we might be dealing with an object or an array or
+// If the product is 'object', we might be dealing with an object or an array or
 // null.
 
         case 'object':
@@ -2640,7 +2640,7 @@ fabric.util.string = {
         body = fabric.document.body || { scrollLeft: 0 };
 
     // looks like in IE (<9) clientX at certain point (apparently when mouseup fires on VML element)
-    // is represented as COM object, with all the consequences, like "unknown" type and error on [[Get]]
+    // is represented as COM object, with all the consequences, like "unknown" product and error on [[Get]]
     // need to investigate later
     return event.pageX || ((typeof event.clientX != 'unknown' ? event.clientX : 0) +
       (docElement.scrollLeft || body.scrollLeft) -
@@ -2788,7 +2788,7 @@ fabric.util.string = {
    * Creates specified element with specified attributes
    * @method makeElement
    * @memberOf fabric.util
-   * @param {String} tagName Type of an element to create
+   * @param {String} tagName Product of an element to create
    * @param {Object} [attributes] Attributes to set on an element
    * @return {HTMLElement} Newly created element
    */
@@ -3026,7 +3026,7 @@ fabric.util.string = {
     request.open(method, url, true);
     
     if (method === 'POST' || method === 'PUT') {
-      request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      request.setRequestHeader('Content-Product', 'application/x-www-form-urlencoded');
     }
 
     request.send(body);
@@ -4019,7 +4019,7 @@ fabric.util.string = {
     if (markup) {
       markup = [
         '<defs>',
-          '<style type="text/css">',
+          '<style product="text/css">',
             '<![CDATA[',
               markup,
             ']]>',
@@ -4897,7 +4897,7 @@ fabric.util.string = {
     /**
      * Background color of canvas instance
      * @property
-     * @type String
+     * @product String
      */
     backgroundColor: 'rgba(0, 0, 0, 0)',
 
@@ -4905,14 +4905,14 @@ fabric.util.string = {
      * Background image of canvas instance
      * Should be set via `setBackgroundImage`
      * @property
-     * @type String
+     * @product String
      */
     backgroundImage: '',
 
     /**
      * Opacity of the background image of the canvas instance
      * @property
-     * @type Float
+     * @product Float
      */
     backgroundImageOpacity: 1.0,
 
@@ -4920,21 +4920,21 @@ fabric.util.string = {
      * Indicatus whether the background image should be stretched to fit the
      * dimensions of the canvas instance.
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     backgroundImageStretch: true,
 
     /**
      * Indicates whether toObject/toDatalessObject should include default values
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     includeDefaultValues: true,
 
     /**
      * Indicates whether objects' state should be saved
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     stateful: true,
 
@@ -4949,14 +4949,14 @@ fabric.util.string = {
      * Function that determines clipping of entire canvas area
      * Being passed context as first argument. See clipping canvas area in https://github.com/kangax/fabric.js/wiki/FAQ
      * @property
-     * @type Function
+     * @product Function
      */
     clipTo: null,
 
     /**
      * Indicates whether object controls (borders/corners) are rendered above overlay image
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     controlsAboveOverlay: false,
 
@@ -5894,7 +5894,7 @@ fabric.util.string = {
     /**
      * @static
      * @property EMPTY_JSON
-     * @type String
+     * @product String
      */
     EMPTY_JSON: '{"objects": [], "background": "white"}',
 
@@ -6039,84 +6039,84 @@ fabric.util.string = {
     /**
      * Indicates that canvas is interactive. This property should not be changed.
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     interactive:            true,
 
     /**
      * Indicates whether group selection should be enabled
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     selection:              true,
 
     /**
      * Color of selection
      * @property
-     * @type String
+     * @product String
      */
     selectionColor:         'rgba(100, 100, 255, 0.3)', // blue
 
     /**
      * Color of the border of selection (usually slightly darker than color of selection itself)
      * @property
-     * @type String
+     * @product String
      */
     selectionBorderColor:   'rgba(255, 255, 255, 0.3)',
 
     /**
      * Width of a line used in object/group selection
      * @property
-     * @type Number
+     * @product Number
      */
     selectionLineWidth:     1,
 
     /**
      * Color of the line used in free drawing mode
      * @property
-     * @type String
+     * @product String
      */
     freeDrawingColor:       'rgb(0, 0, 0)',
 
     /**
      * Width of a line used in free drawing mode
      * @property
-     * @type Number
+     * @product Number
      */
     freeDrawingLineWidth:   1,
 
     /**
      * Default cursor value used when hovering over an object on canvas
      * @property
-     * @type String
+     * @product String
      */
     hoverCursor:            'move',
 
     /**
      * Default cursor value used when moving an object on canvas
      * @property
-     * @type String
+     * @product String
      */
     moveCursor:             'move',
 
     /**
      * Default cursor value used for the entire canvas
      * @property
-     * @type String
+     * @product String
      */
     defaultCursor:          'default',
 
     /**
      * Cursor value used for rotation point
      * @property
-     * @type String
+     * @product String
      */
     rotationCursor:         'crosshair',
 
     /**
      * Default element class that's given to wrapper (div) element of canvas
      * @property
-     * @type String
+     * @product String
      */
     containerClass:        'canvas-container',
 
@@ -6338,7 +6338,7 @@ fabric.util.string = {
       * Method that defines the actions when mouse is hovering the canvas.
       * The currentTransform parameter will definde whether the user is rotating/scaling/translating
       * an image or neither of them (only hovering). A group selection is also possible and would cancel
-      * all any other type of action.
+      * all any other product of action.
       * In case of an image transformation only the top canvas will be rendered.
       * @method __onMouseMove
       * @param e {Event} Event object fired on mousemove
@@ -7604,196 +7604,196 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   fabric.Object = fabric.util.createClass(/** @scope fabric.Object.prototype */ {
 
     /**
-     * Type of an object (rect, circle, path, etc)
+     * Product of an object (rect, circle, path, etc)
      * @property
-     * @type String
+     * @product String
      */
     type:                       'object',
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     top:                      0,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     left:                     0,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     width:                    0,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     height:                   0,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     scaleX:                   1,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     scaleY:                   1,
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     flipX:                    false,
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     flipY:                    false,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     opacity:                  1,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     angle:                    0,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     cornersize:               12,
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     transparentCorners:       true,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     padding:                  0,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     borderColor:              'rgba(102,153,255,0.75)',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     cornerColor:              'rgba(102,153,255,0.5)',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     fill:                     'rgb(0,0,0)',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     fillRule:                 'source-over',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     overlayFill:              null,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     stroke:                   null,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     strokeWidth:              1,
 
     /**
      * @property
-     * @type Array
+     * @product Array
      */
     strokeDashArray:          null,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     borderOpacityWhenMoving:  0.4,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     borderScaleFactor:        1,
 
     /**
      * Transform matrix
      * @property
-     * @type Array
+     * @product Array
      */
     transformMatrix:          null,
 
     /**
      * When set to `false`, an object can not be selected for modification (using either point-click-based or group-based selection)
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     selectable:               true,
 
     /**
      * When set to `false`, object's controls are not displayed and can not be used to manipulate object
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     hasControls:              true,
 
     /**
      * When set to `false`, object's borders are not rendered
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     hasBorders:               true,
 
     /**
      * When set to `false`, object's rotating point will not be visible or selectable
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     hasRotatingPoint:         false,
 
     /**
      * Offset for object's rotating point (when enabled)
      * @property
-     * @type Number
+     * @product Number
      */
     rotatingPointOffset:      40,
 
     /**
      * @private
      * @property
-     * @type Number
+     * @product Number
      */
     _theta:                   0,
 
@@ -7805,7 +7805,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
      * List of properties to consider when checking if state of an object is changed (fabric.Object#hasStateChanged);
      * as well as for history (undo/redo) purposes
      * @property
-     * @type Array
+     * @product Array
      */
     stateProperties:  (
       'top left width height scaleX scaleY flipX flipY ' +
@@ -8759,8 +8759,8 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @method isType
-     * @param type {String} type to check against
-     * @return {Boolean} true if specified type is identical to the type of instance
+     * @param type {String} product to check against
+     * @return {Boolean} true if specified product is identical to the product of instance
      */
     isType: function(type) {
       return this.type === type;
@@ -9300,14 +9300,14 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
     /**
      * @static
      * @constant
-     * @type Number
+     * @product Number
      */
     NUM_FRACTION_DIGITS:        2,
 
     /**
      * @static
      * @constant
-     * @type Number
+     * @product Number
      */
     MIN_SCALE_LIMIT:            0.1
 
@@ -9337,7 +9337,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'line',
 
@@ -9520,7 +9520,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'circle',
 
@@ -9691,7 +9691,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
     
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'triangle',
     
@@ -9799,7 +9799,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'ellipse',
 
@@ -9962,19 +9962,19 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'rect',
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     rx: 0,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     ry: 0,
 
@@ -10183,7 +10183,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'polyline',
 
@@ -10341,7 +10341,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'polygon',
 
@@ -10651,7 +10651,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'path',
 
@@ -11273,19 +11273,19 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'path-group',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     fill: '',
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     forceFillOverwrite: false,
 
@@ -11511,7 +11511,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'group',
 
@@ -12000,25 +12000,25 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     active: false,
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     bordervisibility: false,
 
     /**
      * @property
-     * @type Boolean
+     * @product Boolean
      */
     cornervisibility: false,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type: 'image',
 
@@ -12348,7 +12348,7 @@ fabric.util.object.extend(fabric.StaticCanvas.prototype, {
   /**
    * Default CSS class name for canvas
    * @static
-   * @type String
+   * @product String
    */
   fabric.Image.CSS_CANVAS = "canvas-img";
 
@@ -13059,88 +13059,88 @@ fabric.Image.filters.Tint.fromObject = function(object) {
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     fontSize:         40,
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     fontWeight:       100,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     fontFamily:       'Times New Roman',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     textDecoration:   '',
 
     /**
      * @property
-     * @type String | null
+     * @product String | null
      */
     textShadow:       '',
 
     /**
      * Determines text alignment. Possible values: "left", "center", or "right".
      * @property
-     * @type String
+     * @product String
      */
     textAlign:        'left',
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     fontStyle:        '',
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     lineHeight:       1.3,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     strokeStyle:      '',
 
     /**
      * @property
-     * @type Number
+     * @product Number
      */
     strokeWidth:      1,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     backgroundColor:  '',
 
 
     /**
      * @property
-     * @type String | null
+     * @product String | null
      */
     path:             null,
 
     /**
      * @property
-     * @type String
+     * @product String
      */
     type:             'text',
 
     /**
      * Indicates whether canvas native text methods should be used to render text (otherwise, Cufon is used)
      * @property
-     * @type Boolean
+     * @product Boolean
      */
      useNative:       true,
 

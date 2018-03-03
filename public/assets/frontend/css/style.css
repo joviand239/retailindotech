@@ -16,6 +16,11 @@
   .secondary-btn:hover {
     background: rgba(255, 239, 94, 0.6);
     color: #009688; }
+  .secondary-btn.inline {
+    width: auto;
+    border-radius: 0;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem; }
 
 .link-btn {
   color: #009688; }
@@ -258,6 +263,15 @@ hr {
     text-align: center;
     font-size: 38px;
     text-transform: uppercase; }
+
+.form-control {
+  outline: none; }
+  .form-control:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: #ffef5e; }
+  .form-control.custom {
+    min-height: 50px; }
 
 #home .banner {
   position: relative; }

@@ -18,6 +18,13 @@
     background: rgba($secondary-color, .6);
     color: $main-color;
   }
+
+  &.inline {
+    width: auto;
+    border-radius: 0;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+  }
 }
 
 

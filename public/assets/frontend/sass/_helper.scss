@@ -1,0 +1,14 @@
+.form-control {
+  outline: none;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+    border-color: $secondary-color;
+  }
+
+
+  &.custom {
+    min-height: 50px;
+  }
+}
