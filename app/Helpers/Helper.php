@@ -236,4 +236,10 @@ function GetProductList() {
 }
 
 
+function getProductMenu() {
+    $product = Product::all();
+
+    return $product;
+}
+
 

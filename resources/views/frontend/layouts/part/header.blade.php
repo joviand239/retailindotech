@@ -12,8 +12,13 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{!! route('about') !!}">Tentang Kami</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Produk</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" href="#">Produk</a>
+                    <div class="dropdown-menu">
+                        @foreach(getProductMenu() as $item)
+                            <a class="dropdown-item" href="{!! route('product-category', ['url' => @$item->url]) !!}">{!! @$item->name !!}</a>
+                        @endforeach
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Layanan</a>

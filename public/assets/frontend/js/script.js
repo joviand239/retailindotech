@@ -14,4 +14,14 @@ $(document).ready(function () {
     });
 
 
+
+    if ($('#product .nav-wrapper .nav').length) {
+        $('.nav-wrapper .nav .nav-item:first-child .nav-link').addClass('active');
+    }
+
+    if ($('#product .tab-content').length) {
+        $('.tab-content .tab-pane:first-child').addClass('show active');
+    }
+
+
 });

@@ -43,4 +43,11 @@ class Item extends BaseEntity {
     const FORM_LABEL_HELP = [
 
     ];
+
+
+    function getFeaturedImageAttribute($value) {
+        if (empty($value)) return [];
+
+        return json_decode($value);
+    }
 }

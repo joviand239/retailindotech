@@ -36,4 +36,11 @@ class Product extends BaseEntity {
         'metaTitle' => 'Untuk keperluan SEO',
         'metaDescription' => 'Untuk keperluan SEO',
     ];
+
+
+    function getBannerImageAttribute($value) {
+        if (empty($value)) return [];
+
+        return json_decode($value);
+    }
 }

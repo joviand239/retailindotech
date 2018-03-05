@@ -81,7 +81,7 @@ html, body {
 .sec-bg {
   background: #f6f6f6; }
 
-.display-flex, .head, .call-to-action-section .inline-wrapper, .page-banner {
+.display-flex, .head, .call-to-action-section .inline-wrapper, .page-banner, .model-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -263,6 +263,49 @@ hr {
     text-align: center;
     font-size: 38px;
     text-transform: uppercase; }
+
+.tab-title {
+  margin-bottom: 20px;
+  font-size: 36px;
+  color: #009688; }
+
+.nav-wrapper .nav {
+  border: 1px solid #cacaca;
+  padding: 15px 0px; }
+  .nav-wrapper .nav .nav-item {
+    width: 100%; }
+    .nav-wrapper .nav .nav-item .nav-link {
+      font-size: 13px; }
+      .nav-wrapper .nav .nav-item .nav-link.active {
+        color: #009688; }
+      .nav-wrapper .nav .nav-item .nav-link:hover {
+        color: #009688; }
+
+.model-wrapper {
+  border: 1px solid #cacaca;
+  margin-bottom: 35px; }
+  .model-wrapper .image-wrapper {
+    width: 30%;
+    padding: 15px; }
+  .model-wrapper .detail-wrapper {
+    width: 70%;
+    padding: 15px; }
+    .model-wrapper .detail-wrapper .row {
+      margin-bottom: 40px; }
+  .model-wrapper .attr {
+    margin-bottom: 0px;
+    font-size: 13px;
+    color: #8c832d;
+    font-weight: 500; }
+  .model-wrapper .value {
+    margin-bottom: 0px;
+    font-size: 11px; }
+  .model-wrapper .link-btn {
+    width: 100%;
+    text-align: right;
+    display: block;
+    color: #8c832d;
+    font-weight: 500; }
 
 .form-control {
   outline: none; }

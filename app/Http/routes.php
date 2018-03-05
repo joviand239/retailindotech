@@ -51,6 +51,8 @@ Route::get('/home', 'Frontend\HomeController@index')->name('home');
 
 Route::get('/tentang-kami', 'Frontend\AboutController@index')->name('about');
 
+Route::get('/produk/{url?}', 'Frontend\ProductController@getProductCategory')->name('product-category');
+
 Route::get('/kontak-kami', 'Frontend\ContactController@index')->name('contact');
 
 
