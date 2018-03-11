@@ -367,23 +367,6 @@
             </div>
         </div>
 
-        <div class="call-to-action-section">
-            <div class="container">
-                <div class="inline-wrapper">
-                    <div>
-                        <h1 class="title">Anda memiliki pertanyaan bisnis?</h1>
-                        <h2 class="subtitle">Silahkan hubungi kami atau klik tombol ini.</h2>
-                    </div>
-
-                    <a href="{!! route('contact') !!}" class="cta-btn">
-                        KONTAK KAMI
-                    </a>
-                </div>
-            </div>
-        </div>
-
-
-
     </section>
 
 @endsection

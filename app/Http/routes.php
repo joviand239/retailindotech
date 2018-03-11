@@ -31,6 +31,8 @@ Route::group(['prefix'=>'admin'], function () {
 
 		CMSCore::CRUDRoute('product', 'products');
         CMSCore::CRUDRoute('item', 'items');
+        CMSCore::CRUDRoute('customerdetail', 'customerdetails');
+        CMSCore::CRUDRoute('guarantee', 'guarantees');
 
         Route::get('/product/{productId?}/category/details/{categoryId?}', 'Admin\CategoryController@details')->name('admin.category-details');
         Route::post('/product/{productId?}/category/{categoryId?}', 'Admin\CategoryController@save')->name('admin.category-save');
@@ -52,6 +54,10 @@ Route::get('/home', 'Frontend\HomeController@index')->name('home');
 Route::get('/tentang-kami', 'Frontend\AboutController@index')->name('about');
 
 Route::get('/produk/{url?}', 'Frontend\ProductController@getProductCategory')->name('product-category');
+
+Route::get('/layanan', 'Frontend\ServiceController@index')->name('service');
+
+Route::get('/layanan/reservasi', 'Frontend\ServiceController@getReservation')->name('service-reservation');
 
 Route::get('/kontak-kami', 'Frontend\ContactController@index')->name('contact');
 

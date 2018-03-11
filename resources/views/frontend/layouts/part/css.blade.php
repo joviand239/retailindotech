@@ -11,6 +11,11 @@
 <link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/lightslider/css/lightslider.min.css">
 <!-- Light Slider -->
 
+<!-- Smart Wizard 4 -->
+<link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/smartwizard/css/smart_wizard.min.css">
+<link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/smartwizard/css/smart_wizard_theme_circles.min.css">
+<!-- Smart Wizard 4 -->
+
 
 <link rel="stylesheet" href="{{ url('/') }}/assets/frontend/css/style.css">
 

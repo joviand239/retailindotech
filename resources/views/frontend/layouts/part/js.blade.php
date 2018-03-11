@@ -15,7 +15,11 @@
 <script src="{{ url('/') }}/assets/frontend/library/lightslider/js/lightslider.min.js"></script>
 <!-- Light Slider -->
 
+<!-- Smart Wizard 4 -->
+<script src="{{ url('/') }}/assets/frontend/library/smartwizard/js/jquery.smartWizard.min.js"></script>
+<!-- Smart Wizard 4 -->
 
+<script src="{{ url('/') }}/assets/frontend/js/validator.min.js"></script>
 
 <script src="{{ url('/') }}/assets/frontend/js/script.js"></script>
 

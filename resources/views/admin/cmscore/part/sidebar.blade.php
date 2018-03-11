@@ -40,6 +40,24 @@
                     <div class="title">Item</div>
                 </a>
             </li>
+
+            <li class="dropdown {!! isActiveRoute(['admin.customerdetails']) !!}" >
+                <a href="{!! route('admin.customerdetails') !!}">
+                    <div class="icon">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Customer</div>
+                </a>
+            </li>
+
+            <li class="dropdown {!! isActiveRoute(['admin.guarantees']) !!}" >
+                <a href="{!! route('admin.guarantees') !!}">
+                    <div class="icon">
+                        <i class="fa fa-address-card-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Guarantee Card</div>
+                </a>
+            </li>
         </ul>
     </div>
 </aside>

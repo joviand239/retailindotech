@@ -22,4 +22,10 @@ class Constant {
     const ORDER_TYPE_REGULAR = 'REGULAR';
     const ORDER_TYPE_COLLECT = 'COLLECT';
     const ORDER_TYPE_CUSTOM = 'CUSTOM';
+
+
+
+    const ATTRIBUTE_LIST = [
+        ''
+    ];
 }
