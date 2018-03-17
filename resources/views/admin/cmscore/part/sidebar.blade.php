@@ -23,6 +23,15 @@
                 </div>
             </li>
 
+            <li class="dropdown {!! isActiveRoute(['admin.blogs']) !!}" >
+                <a href="{!! route('admin.blogs') !!}">
+                    <div class="icon">
+                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Berita</div>
+                </a>
+            </li>
+
             <li class="dropdown {!! isActiveRoute(['admin.bookings']) !!}" >
                 <a href="{!! route('admin.bookings') !!}">
                     <div class="icon">

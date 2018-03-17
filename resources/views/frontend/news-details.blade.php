@@ -27,7 +27,7 @@
 
                 <div class="news-wrapper">
 
-                    <p class="date">Jakarta - 29 February 2018</p>
+                    <p class="date"29 February 2018</p>
 
                     <img class="image" src="{!! url('/') !!}/assets/frontend/images/blog-image-1.jpg">
 

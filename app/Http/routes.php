@@ -36,6 +36,8 @@ Route::group(['prefix'=>'admin'], function () {
 
         CMSCore::CRUDRoute('booking', 'bookings');
 
+        CMSCore::CRUDRoute('blog', 'blogs');
+
         Route::get('/product/{productId?}/category/details/{categoryId?}', 'Admin\CategoryController@details')->name('admin.category-details');
         Route::post('/product/{productId?}/category/{categoryId?}', 'Admin\CategoryController@save')->name('admin.category-save');
         Route::get('/product/{productId?}/category/{categoryId?}', 'Admin\CategoryController@delete')->name('admin.category-delete');
