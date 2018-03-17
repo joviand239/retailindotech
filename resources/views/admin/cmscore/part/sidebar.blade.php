@@ -23,6 +23,15 @@
                 </div>
             </li>
 
+            <li class="dropdown {!! isActiveRoute(['admin.bookings']) !!}" >
+                <a href="{!! route('admin.bookings') !!}">
+                    <div class="icon">
+                        <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Reservasi</div>
+                </a>
+            </li>
+
             <li class="dropdown {!! isActiveRoute(['admin.products']) !!}" >
                 <a href="{!! route('admin.products') !!}">
                     <div class="icon">

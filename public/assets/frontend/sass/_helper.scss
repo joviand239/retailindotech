@@ -1,17 +1,38 @@
-.form-control {
-  outline: none;
+.form-group {
 
-  &:focus {
-    box-shadow: none;
+
+
+  .form-control {
     outline: none;
-    border-color: $secondary-color;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+      border-color: $secondary-color;
+    }
+
+
+    &.custom {
+      min-height: 50px;
+    }
   }
 
 
-  &.custom {
-    min-height: 50px;
+  &.has-error {
+    .form-control {
+      border-color: #912727;
+    }
+
+    .help-block {
+      color: #912727;
+    }
   }
+
+
+
 }
+
+
 
 
 
@@ -56,17 +77,26 @@
 
 #reservation-wizard {
   border: none;
+  width: 60%;
+  margin: auto;
 
   .nav-tabs {
     border: none;
-    margin-bottom: 10px;
     background: none;
     @extend .display-flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 400px;
+    margin: auto;
+    margin-bottom: 30px;
+
+    li {
+      margin-left: 0px;
+    }
   }
 
   .title {
     text-align: center;
+    font-size: 30px;
   }
 
   .tab-content {
@@ -87,6 +117,29 @@
   .btn-wrapper {
     text-align: center;
     margin: 30px 0px;
+
+    .btn {
+      background: #a1a1a1;
+      color: white;
+    }
+
+    #submitBtn {
+      background: $main-color;
+      color: white;
+    }
+  }
+
+  label {
+
+    &.required {
+
+      &:after {
+        content: '*';
+        color: #912727;
+        font-size: 18px;
+        margin-left: 5px;
+      }
+    }
   }
 }
 

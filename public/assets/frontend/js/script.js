@@ -24,40 +24,20 @@ $(document).ready(function () {
     }
 
 
-    $('#reservation-wizard').smartWizard({
-        selected: 0,
-        theme: 'circles',
-        transitionEffect:'fade',
-        showStepURLhash: false,
-        hideButtonsOnDisabled: true,
-        toolbarSettings: {
-            toolbarPosition: 'bottom',
-            showNextButton: false,
-            showPreviousButton: false,
-        },
-        anchorSettings: {
-            markDoneStep: true, // add done css
-            markAllPreviousStepsAsDone: true, // When a step selected by url hash, all previous steps are marked done
-            removeDoneStepOnNavigateBack: true, // While navigate back done step after active step will be cleared
-            enableAnchorOnDoneStep: true // Enable/Disable the done steps navigation
-        }
-    });
-
-
-    $("#reservation-wizard").on("leaveStep", function(e, anchorObject, stepNumber, stepDirection) {
-        var elmForm = $("#form-step-" + stepNumber);
-        // stepDirection === 'forward' :- this condition allows to do the form validation
-        // only on forward navigation, that makes easy navigation on backwards still do the validation when going next
-        if(stepDirection === 'forward' && elmForm){
-            elmForm.validator('validate');
-
-            var elmErr = elmForm.find('.has-error');
-            if(elmErr && elmErr.length > 0){
-                // Form validation failed
-                return false;
-            }
-        }
-        return true;
-    });
+    $('.custom-select2').select2();
 
 });
+
+function customAlert(title, description, type, reload) {
+    swal({
+        title: title,
+        text: description,
+        type: type,
+        confirmButtonColor: '#009688',
+        confirmButtonText: 'Continue',
+    }).then((result) => {
+        if (reload){
+            location.reload();
+        }
+    });
+}

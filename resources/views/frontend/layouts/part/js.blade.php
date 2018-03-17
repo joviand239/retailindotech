@@ -3,7 +3,6 @@
 <script src="{{ url('/') }}/assets/frontend/js/popper.min.js"></script>
 <script src="{{ url('/') }}/assets/frontend/js/bootstrap.min.js"></script>
 
-
 <!-- Ladda Loader -->
 <script src="{{ url('/') }}/assets/frontend/library/ladda/spin.min.js"></script>
 <script src="{{ url('/') }}/assets/frontend/library/ladda/ladda.min.js"></script>
@@ -18,6 +17,14 @@
 <!-- Smart Wizard 4 -->
 <script src="{{ url('/') }}/assets/frontend/library/smartwizard/js/jquery.smartWizard.min.js"></script>
 <!-- Smart Wizard 4 -->
+
+<!-- Select 2 -->
+<script src="{{ url('/') }}/assets/frontend/library/select2/js/select2.min.js"></script>
+<!-- Select 2 -->
+
+<!-- SweetAlert -->
+<script src="{{ url('/') }}/assets/frontend/library/sweetalert/js/sweetalert.min.js"></script>
+<!-- SweetAlert -->
 
 <script src="{{ url('/') }}/assets/frontend/js/validator.min.js"></script>
 

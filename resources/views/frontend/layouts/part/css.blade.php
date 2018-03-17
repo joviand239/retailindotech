@@ -16,6 +16,14 @@
 <link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/smartwizard/css/smart_wizard_theme_circles.min.css">
 <!-- Smart Wizard 4 -->
 
+<!-- Select 2 -->
+<link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/select2/css/select2.min.css">
+<!-- Select 2 -->
+
+<!-- SweetAlert -->
+<link rel="stylesheet" href="{{ url('/') }}/assets/frontend/library/sweetalert/css/sweetalert.min.css">
+<!-- SweetAlert -->
+
 
 <link rel="stylesheet" href="{{ url('/') }}/assets/frontend/css/style.css">
 
