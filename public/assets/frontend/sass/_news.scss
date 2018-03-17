@@ -1,0 +1,27 @@
+#news {
+
+
+  .news-wrapper {
+
+    width: 70%;
+    margin: auto;
+
+    .date {
+      color: $main-color;
+      font-size: 18px;
+    }
+
+    .image {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  .control-wrapper {
+    @extend .display-flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+}

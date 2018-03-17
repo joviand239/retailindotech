@@ -283,7 +283,7 @@
 
                 <div class="head">
                     <h1 class="title">Berita Terbaru Kami</h1>
-                    <a href="#" class="btn secondary-btn">LIHAT SEMUA</a>
+                    <a href="{!! route('news') !!}" class="btn secondary-btn">LIHAT SEMUA</a>
                 </div>
 
                 <hr>

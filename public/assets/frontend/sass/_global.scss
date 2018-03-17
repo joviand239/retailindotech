@@ -104,18 +104,20 @@ hr {
       @include transition(all, 0.5s, ease);
 
       &:hover {
-        background: $main-color;
-        color: white;
+        color: $main-color;
       }
     }
 
     .active {
 
       .nav-link {
-        background: $main-color;
-        color: white;
+        color: $main-color;
       }
 
+    }
+
+    .dropdown-item {
+      color: $body-color;
     }
 
   }

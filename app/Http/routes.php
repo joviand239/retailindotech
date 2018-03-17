@@ -59,6 +59,10 @@ Route::get('/layanan', 'Frontend\ServiceController@index')->name('service');
 
 Route::get('/layanan/reservasi', 'Frontend\ServiceController@getReservation')->name('service-reservation');
 
+Route::get('/berita', 'Frontend\NewsController@index')->name('news');
+
+Route::get('/berita/detail/{url?}', 'Frontend\NewsController@getDetails')->name('news-details');
+
 Route::get('/kontak-kami', 'Frontend\ContactController@index')->name('contact');
 
 

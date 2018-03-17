@@ -83,7 +83,7 @@ html, body {
 .sec-bg {
   background: #f6f6f6; }
 
-.display-flex, .head, .call-to-action-section .inline-wrapper, .page-banner, .model-wrapper, .circle-icon-wrapper, #reservation-wizard .nav-tabs, .sw-theme-circles > ul.step-anchor > li {
+.display-flex, .head, .call-to-action-section .inline-wrapper, .page-banner, .model-wrapper, .circle-icon-wrapper, #reservation-wizard .nav-tabs, .sw-theme-circles > ul.step-anchor > li, #news .control-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -130,11 +130,11 @@ hr {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease; }
     .navbar .navbar-nav .nav-link:hover {
-      background: #009688;
-      color: white; }
+      color: #009688; }
   .navbar .navbar-nav .active .nav-link {
-    background: #009688;
-    color: white; }
+    color: #009688; }
+  .navbar .navbar-nav .dropdown-item {
+    color: #737373; }
 
 #footer-top {
   padding: 30px 0px;
@@ -424,5 +424,19 @@ hr {
   color: #009688; }
 #home .sec-line {
   border-top: 4px solid #ffef5e; }
+
+#news .news-wrapper {
+  width: 70%;
+  margin: auto; }
+  #news .news-wrapper .date {
+    color: #009688;
+    font-size: 18px; }
+  #news .news-wrapper .image {
+    margin-bottom: 30px; }
+#news .control-wrapper {
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 50px; }
 
 /*# sourceMappingURL=style.css.map */
