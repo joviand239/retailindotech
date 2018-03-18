@@ -51,6 +51,8 @@
                                                 <img src="{!! getImageUrlSize(@$item->featuredImage[0], 'full') !!}">
                                             </div>
                                             <div class="detail-wrapper">
+                                                <h3 class="name">{!! @$item->name !!}</h3>
+
                                                 <h4 class="description">Description</h4>
 
                                                 <div class="row">

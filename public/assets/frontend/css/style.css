@@ -294,6 +294,8 @@ hr {
     padding: 15px; }
     .model-wrapper .detail-wrapper .row {
       margin-bottom: 40px; }
+  .model-wrapper .name {
+    color: #009688; }
   .model-wrapper .attr {
     margin-bottom: 0px;
     font-size: 13px;

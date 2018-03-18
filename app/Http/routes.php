@@ -34,6 +34,16 @@ Route::group(['prefix'=>'admin'], function () {
         CMSCore::CRUDRoute('customerdetail', 'customerdetails');
         CMSCore::CRUDRoute('guarantee', 'guarantees');
 
+
+        Route::get('/guarantee/{guaranteeId?}/guaranteeitem/details/{guaranteeItemId?}', 'Admin\GuaranteeItemController@details')->name('admin.guaranteeitem-details');
+        Route::post('/guarantee/{guaranteeId?}/guaranteeitem/{guaranteeItemId?}', 'Admin\GuaranteeItemController@save')->name('admin.guaranteeitem-save');
+        Route::get('/guarantee/{guaranteeId?}/guaranteeitem/{guaranteeItemId?}', 'Admin\GuaranteeItemController@delete')->name('admin.guaranteeitem-delete');
+
+
+
+
+
+
         CMSCore::CRUDRoute('booking', 'bookings');
 
         CMSCore::CRUDRoute('blog', 'blogs');
