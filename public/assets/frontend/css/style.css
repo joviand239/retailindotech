@@ -118,10 +118,10 @@ hr {
 .navbar {
   box-shadow: 0px 1px 20px 0px #898989; }
   .navbar .navbar-brand {
-    width: 15%;
+    width: 25%;
     text-align: center; }
     .navbar .navbar-brand img {
-      width: 120px; }
+      width: 250px; }
   .navbar .navbar-nav .nav-link {
     padding-right: 20px;
     padding-left: 20px;
@@ -141,7 +141,7 @@ hr {
   background: #009688;
   color: white; }
   #footer-top .icon {
-    width: 150px;
+    width: 250px;
     margin-bottom: 10px; }
   #footer-top .head-title {
     margin-bottom: 20px;
@@ -161,7 +161,7 @@ hr {
   background-position: center center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  min-height: 500px; }
+  min-height: 530px; }
 .slider .item .box-container {
   width: 45%;
   padding: 150px 0px; }
