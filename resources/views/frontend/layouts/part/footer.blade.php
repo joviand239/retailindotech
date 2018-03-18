@@ -21,8 +21,7 @@
             <div class="col-md-5">
                 <img class="icon" src="{!! url('/') !!}/assets/frontend/images/logo.png" alt="{!! env('PROJECT_NAME') !!} Logo">
                 <p>
-                    PT. Retailindo Technology berdiri sejak th 2003. Kami adalah perusahaan yang melayani kebutuhan kehadiran/absensi karyawan dan akses control sidik jari menjadi bisnis utama. PT. Retailindo Technology memberikan komitmen untuk melakukan
-                    pelayanan kebutuhan akan mesin absensi karyawan kepada para customernya.
+                    {!! GetAboutByKey('footerSummary') !!}
                 </p>
             </div>
 
@@ -30,9 +29,7 @@
                 <h2 class="head-title">Kantor Pusat</h2>
 
                 <p>
-                    Jl. Balikpapan Raya No. 23,<br>
-                    Jakarta Pusat, DKI Jakarta 10160,<br>
-                    Indonesia.
+                    {!! GetAboutByKey('address') !!}
                 </p>
 
                 <table>
@@ -41,7 +38,7 @@
                             Phone.
                         </td>
                         <td class="text-right">
-                            +62 815-1826-601
+                            {!! GetAboutByKey('phone') !!}
                         </td>
                     </tr>
 
@@ -50,7 +47,7 @@
                             Fax.
                         </td>
                         <td class="text-right">
-                            +62 21-3523-594
+                            {!! GetAboutByKey('fax') !!}
                         </td>
                     </tr>
 
@@ -59,7 +56,7 @@
                             Email.
                         </td>
                         <td class="text-right">
-                            info@retailindotech.com
+                            {!! GetAboutByKey('email') !!}
                         </td>
                     </tr>
 
@@ -68,7 +65,7 @@
                             Website.
                         </td>
                         <td class="text-right">
-                            www.retailindotech.com
+                            {!! GetAboutByKey('website') !!}
                         </td>
                     </tr>
                 </table>

@@ -5,6 +5,7 @@ use \App\Entity\Order;
 use \App\Entity\User\Customer;
 use \App\Util\Constant;
 use \App\Entity\Product;
+use \App\Entity\CMS\About;
 
 function getPriceNumberWithComa($value) {
     if (empty($value)) {
@@ -240,5 +241,11 @@ function getProductMenu() {
     $product = Product::all();
 
     return $product;
+}
+
+function GetAboutByKey($key) {
+    $data = About::getPage();
+
+    return $data->json->$key;
 }
 

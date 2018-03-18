@@ -19,7 +19,9 @@ class Product extends BaseEntity {
         'metaDescription' => 'TextArea',
         'name' => 'Text',
         'url' => 'Text',
-        'bannerImage' => 'Image_1'
+        'bannerImage' => 'Image_1',
+        'cardImage' => 'Image_1',
+        'summary' => 'TextArea'
     ];
 
     const INDEX_FIELD = [
@@ -39,6 +41,12 @@ class Product extends BaseEntity {
 
 
     function getBannerImageAttribute($value) {
+        if (empty($value)) return [];
+
+        return json_decode($value);
+    }
+
+    function getCardImageAttribute($value) {
         if (empty($value)) return [];
 
         return json_decode($value);

@@ -1,17 +1,17 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Tentang Kami')
+@section('meta_title', @$page->metaTitle)
 
-@section('meta_description', 'Halaman Tentang Kami')
+@section('meta_description', @$page->metaDescription)
 
 @section('content')
 
     <section id="about">
-        <div class="page-banner" style="background: url('{!! url('/') !!}/assets/frontend/images/banner-page.jpg')">
+        <div class="page-banner" style="background: url({!! getImageUrlSize(@$page->bannerImage[0], 'full') !!})">
 
             <div class="container">
                 <h1 class="page-title">
-                    Tentang Kami
+                    {!! @$page->bannerText !!}
                 </h1>
 
                 <hr>
@@ -34,34 +34,7 @@
 
                         <hr class="sec-small">
 
-                        <p>
-                            <b>PT. Retailindo Technology</b> berdiri sejak th 2003, pada mulanya badan hukum kami berbentuk
-                            CV dan Pada awal Tahun 2009 legalitas perusahaan menjadi berbadan hukum PT. Kami adalah
-                            perusahaan yang melayani kebutuhan kehadiran/absensi karyawan dan akses control sidik jari
-                            menjadi bisnis utama.
-                        </p>
-                        <p>
-                            <b>PT. Retailindo Technology</b> memberikan komitmen untuk melakukan
-                            pelayanan kebutuhan akan mesin absensi karyawan kepada para customernya. Retailindo
-                            Technology menjual, service dan mendistribusikan produk sidik jari dengan merek <b>FingerTec</b>
-                            yang sudah terbukti berkualitas, inovatif dan penyedia fasilitas informasi yang terlengkap
-                        </p>
-                        <p>
-                            <b>FingerTec</b> menyediakan berbagai macam mesin absensi
-                            dan access door yang menggunakan technology
-                            pembacaan sidik jari yang dilengkapi dengan software yang
-                            sangat friendly user dan lengkap karena sangat mudah
-                            dipelajari, dimengerti dan dapat memenuhi kebutuhan dari
-                            perusahaan kecil sampai perusahaan besar dan berskala
-                            International maupun pabrik. Dengan system kehadiran
-                            absen sederhana dan dilengkapi dengan panduan berupa
-                            video guide baik hardware maupun software.
-                        </p>
-                        <p>
-                            Dengan system kehadiran
-                            absen sederhana dan dilengkapi dengan panduan berupa
-                            video guide baik hardware maupun software.
-                        </p>
+                        {!! @$page->description !!}
                     </div>
 
                     <div class="col-md-6 col-12">
@@ -70,36 +43,13 @@
                         <hr class="sec-small">
 
 
-                        <p>
-                            Retailindo technology berkomitment menjual produk-produk yang
-                            berkualitas dan memberikan pelayanan purna jual terbaik dengan
-                            pelayanan yang cepat, dan tanggung jawab. Faktor yang terpenting
-                            melayanin dan merespon permintaan customer dengan cepat.
-                        </p>
+                        {!! @$page->vision !!}
 
                         <h1 class="title">Misi</h1>
 
                         <hr class="sec-small">
 
-                        <ol>
-                            <li>
-                                Meningkatkan Mutu pelayanan dan Inovatif produk biometric
-                            </li>
-                            <li>
-                                Membangun suatu service center dan customer service center service untuk
-                                mendukung produk Fingertec, CCTV dan Payroll System (Sistem pengajian)
-                            </li>
-                            <li>
-                                Memberikan Edukasi tentang biometric system kepada customer.
-                            </li>
-                            <li>
-                                Memahami kebutuhan akan mesin biometric ( mesin sidik jari) untuk customer
-                                dan purna jual baik untuk produk kami
-                            </li>
-                            <li>
-                                Membuka lapangan pekerjaan untuk mensupport seluruh customer kami
-                            </li>
-                        </ol>
+                        {!! @$page->mission !!}
 
 
                     </div>

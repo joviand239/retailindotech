@@ -77,7 +77,7 @@ Route::post('/layanan/reservasi/save', 'Frontend\ServiceController@saveReservati
 
 Route::get('/berita', 'Frontend\NewsController@index')->name('news');
 
-Route::get('/berita/detail/{url?}', 'Frontend\NewsController@getDetails')->name('news-details');
+Route::get('/berita/detail/{id?}', 'Frontend\NewsController@getDetails')->name('news-details');
 
 Route::get('/kontak-kami', 'Frontend\ContactController@index')->name('contact');
 

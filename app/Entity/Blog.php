@@ -15,7 +15,8 @@ class Blog extends BaseEntity {
         'summary' => 'TextArea',
         'featuredImage' => 'Image_1',
         'gallery' => 'Image_0',
-        'content' => 'Wysiwyg'
+        'content' => 'Wysiwyg',
+        'source' => 'Text',
     ];
 
     const INDEX_FIELD = [
