@@ -36,15 +36,22 @@
 
 
 
-                    <div class="control-wrapper">
+                    <div class="row mt-30">
 
-                        @if(@$previous)
-                            <a href="{!! route('news-details', ['id' => @$previous->id]) !!}" class="link-btn"><i class="fa fa-long-arrow-left"></i> Previous</a>
-                        @endif
+                        <div class="col-6 text-left">
+                            @if($previous)
+                                <a href="{!! route('news-details', ['id' => @$previous->id]) !!}" class="link-btn"><i class="fa fa-long-arrow-left"></i> Previous</a>
+                            @endif
+                        </div>
 
-                        @if(@$next)
-                            <a href="{!! route('news-details', ['id' => @$next->id]) !!}" class="link-btn">Next <i class="fa fa-long-arrow-right"></i></a>
-                        @endif
+
+                        <div class="col-6 text-right">
+                            @if($next)
+                                <a href="{!! route('news-details', ['id' => @$next->id]) !!}" class="link-btn">Next <i class="fa fa-long-arrow-right"></i></a>
+                            @endif
+                        </div>
+
+
                     </div>
 
                 </div>

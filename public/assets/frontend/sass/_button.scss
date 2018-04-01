@@ -12,11 +12,11 @@
 
 .secondary-btn {
   background: $secondary-color;
-  color: $main-color;
+  color: white;
 
   &:hover {
     background: rgba($secondary-color, .6);
-    color: $main-color;
+    color: white;
   }
 
   &.inline {
