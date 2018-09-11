@@ -30,14 +30,14 @@
                         <div class="col-md-4">
                             <div class="card-blog">
                                 <div class="image-wrapper">
-                                    <a href="{!! route('news-details', ['id' => @$item->id]) !!}">
-                                        <img class="image" src="{!! getImageUrlSize(@$item->featuredImage[0], 'full') !!}">
+                                    <a href="{!! route('news-details', ['permalink' => @$item->permalink]) !!}">
+                                        <img class="image" src="{!! getImageUrlSize(@$item->featuredImage, 'full') !!}">
                                     </a>
                                 </div>
 
                                 <div class="detail-wrapper">
                                     <p class="date">{!! getDateOnly(@$item->publishDate) !!}</p>
-                                    <a href="{!! route('news-details', ['id' => @$item->id]) !!}">
+                                    <a href="{!! route('news-details', ['permalink' => @$item->permalink]) !!}">
                                         <h3 class="title">
                                             {!! @$item->title !!}
                                         </h3>
@@ -46,7 +46,7 @@
                                         {!! @$item->summary !!}
                                     </p>
 
-                                    <a href="{!! route('news-details', ['id' => @$item->id]) !!}" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{!! route('news-details', ['permalink' => @$item->permalink]) !!}" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
 
                             </div>

@@ -1,13 +1,13 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', @$product->metaTitle)
-
-@section('meta_description', @$product->metaDescription)
+@section('metaTitle', @$product->metaTitle)
+@section('metaDescription', @$product->metaDescription)
+@section('metaKeywords', @$product->metaKeywords)
 
 @section('content')
 
     <section id="product">
-        <div class="page-banner" style="background: url({!! getImageUrlSize($product->bannerImage[0], 'full') !!})">
+        <div class="page-banner" style="background: url({!! getImageUrlSize($product->bannerImage, 'full') !!})">
 
             <div class="container">
                 <h1 class="page-title">
@@ -48,7 +48,7 @@
                                     @foreach(@$list as $item)
                                         <div class="model-wrapper">
                                             <div class="image-wrapper">
-                                                <img src="{!! getImageUrlSize(@$item->featuredImage[0], 'full') !!}">
+                                                <img src="{!! getImageUrlSize(@$item->featuredImage, 'full') !!}">
                                             </div>
                                             <div class="detail-wrapper">
                                                 <h3 class="name">{!! @$item->name !!}</h3>

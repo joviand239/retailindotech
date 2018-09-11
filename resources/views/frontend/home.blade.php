@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', @$page->metaTitle)
-
-@section('meta_description', @$page->metaDescription)
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
 @section('content')
 
@@ -121,8 +121,8 @@
                         <div class="col-md-4 col-12">
                             <div class="card-product">
                                 <div class="image-wrapper">
-                                    <a href="{!! route('product-category', ['url' => @$item->url]) !!}">
-                                        <img class="image" src="{!! getImageUrlSize(@$item->cardImage[0], 'full') !!}" alt="Fingerprint Recognition">
+                                    <a href="{!! route('product-category', ['permalink' => @$item->permalink]) !!}">
+                                        <img class="image" src="{!! getImageUrlSize(@$item->cardImage, 'full') !!}" alt="Fingerprint Recognition">
                                     </a>
                                 </div>
 
@@ -174,14 +174,14 @@
                         <div class="col-md-4">
                             <div class="card-blog">
                                 <div class="image-wrapper">
-                                    <a href="{!! route('news-details', ['id' => @$item->id]) !!}">
-                                        <img class="image" src="{!! getImageUrlSize(@$item->featuredImage[0], 'full') !!}">
+                                    <a href="{!! route('news-details', ['permalink' => @$item->permalink]) !!}">
+                                        <img class="image" src="{!! getImageUrlSize(@$item->featuredImage, 'full') !!}">
                                     </a>
                                 </div>
 
                                 <div class="detail-wrapper">
                                     <p class="date">{!! getDateOnly(@$item->publishDate) !!}</p>
-                                    <a href="{!! route('news-details', ['id' => @$item->id]) !!}">
+                                    <a href="{!! route('news-details', ['permalink' => @$item->permalink]) !!}">
                                         <h3 class="title">
                                             {!! @$item->title !!}
                                         </h3>
@@ -190,7 +190,7 @@
                                         {!! @$item->summary !!}
                                     </p>
 
-                                    <a href="{!! route('news-details', ['id' => @$item->id]) !!}" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{!! route('news-details', ['permalink' => @$item->permalink]) !!}" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
 
                             </div>

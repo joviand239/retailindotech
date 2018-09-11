@@ -6,6 +6,7 @@ use \App\Entity\User\Customer;
 use \App\Util\Constant;
 use \App\Entity\Product;
 use \App\Entity\CMS\About;
+use App\Entity\Setting;
 
 function getPriceNumberWithComa($value) {
     if (empty($value)) {
@@ -249,3 +250,25 @@ function GetAboutByKey($key) {
     return $data->json->$key;
 }
 
+function getCustomDate($stringDate){
+    return (new Carbon($stringDate))->format('d F Y');
+}
+
+function getFullDate($stringDate){
+    return (new Carbon($stringDate))->format('l, jS F Y');
+}
+
+function getSettingAttribute($key){
+    $model = Setting::first();
+
+    if (!$model) {
+        return '';
+    }
+
+
+    if (isset($model->$key)){
+        return $model->$key;
+    }else {
+        return '';
+    }
+}

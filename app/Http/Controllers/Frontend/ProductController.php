@@ -15,8 +15,10 @@ use App\Entity\CMS\Home;
 
 class ProductController extends FrontendController {
 
-    public function getProductCategory($url) {
-        $product = Product::where('url', $url)->get()->first();
+    public function getProductCategory($permalink) {
+        $id = parsePermalinkToId($permalink);
+
+        $product = Product::get($id);
 
         $categories = $product->categories;
 

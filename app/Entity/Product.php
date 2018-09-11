@@ -2,11 +2,25 @@
 
 namespace App\Entity;
 
+use App\CMSTrait\SingleImageTrait;
 use App\Entity\Base\BaseEntity;
 
 
 class Product extends BaseEntity {
+    use SingleImageTrait;
+
     protected $table = 'product';
+
+    protected $appends = [
+        'permalink',
+    ];
+
+    protected $fillable = [
+        'name',
+        'bannerImage',
+        'cardImage',
+        'summary',
+    ];
 
     public function categories(){
         return $this->hasMany(Category::class);
@@ -14,11 +28,10 @@ class Product extends BaseEntity {
 
     const FORM_DISABLED = ['url'];
 
+    const USE_META_SET = true;
+
     const FORM_TYPE = [
-        'metaTitle' => 'Text',
-        'metaDescription' => 'TextArea',
         'name' => 'Text',
-        'url' => 'Text',
         'bannerImage' => 'Image_1',
         'cardImage' => 'Image_1',
         'summary' => 'TextArea'
@@ -26,29 +39,18 @@ class Product extends BaseEntity {
 
     const INDEX_FIELD = [
         'name',
-        'url',
+        'summary',
     ];
 
     const FORM_LABEL = [
-        'metaTitle' => 'Judul halaman',
-        'metaDescription' => 'Deskripsi halaman',
+
     ];
 
     const FORM_LABEL_HELP = [
-        'metaTitle' => 'Untuk keperluan SEO',
-        'metaDescription' => 'Untuk keperluan SEO',
+
     ];
 
-
-    function getBannerImageAttribute($value) {
-        if (empty($value)) return [];
-
-        return json_decode($value);
-    }
-
-    function getCardImageAttribute($value) {
-        if (empty($value)) return [];
-
-        return json_decode($value);
+    public function getPermalinkAttribute() {
+        return getPermalink($this->name, $this->id);
     }
 }

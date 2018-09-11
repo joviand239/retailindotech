@@ -23,7 +23,9 @@ class NewsController extends FrontendController {
         ]);
     }
 
-    public function getDetails($id) {
+    public function getDetails($permalink) {
+        $id = parsePermalinkToId($permalink);
+
         $detail = Blog::get($id);
 
         // get previous user id

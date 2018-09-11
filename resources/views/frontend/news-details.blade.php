@@ -1,8 +1,8 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Detail Berita')
-
-@section('meta_description', 'Halaman Detail Berita')
+@section('metaTitle', @$detail->metaTitle)
+@section('metaDescription', @$detail->metaDescription)
+@section('metaKeywords', @$detail->metaKeywords)
 
 @section('content')
 
@@ -27,9 +27,9 @@
 
                 <div class="news-wrapper">
 
-                    <p class="date">{!! getDateOnly(@$detail->publishDate) !!}</p>
+                    <p class="date">{!! getFullDate(@$detail->publishDate) !!}</p>
 
-                    <img class="image" src="{!! getImageUrlSize(@$detail->featuredImage[0], 'full') !!}">
+                    <img class="image" src="{!! getImageUrlSize(@$detail->featuredImage, 'full') !!}">
 
                     {!! @$detail->content !!}
 

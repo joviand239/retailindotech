@@ -40,7 +40,9 @@ Route::group(['prefix'=>'admin'], function () {
         Route::get('/guarantee/{guaranteeId?}/guaranteeitem/{guaranteeItemId?}', 'Admin\GuaranteeItemController@delete')->name('admin.guaranteeitem-delete');
 
 
-
+        // SETTING
+        Route::get('/setting/{id?}', 'Admin\SettingController@details')->name('admin.setting');
+        Route::post('/setting/{id?}', 'Admin\SettingController@save')->name('admin.setting.save');
 
 
 
@@ -61,25 +63,26 @@ Route::group(['middleware' => ['authweb'], 'roles'=>['CUSTOMER', 'CUSTOMERBIZ'],
 });
 
 
-Route::get('/', 'Frontend\HomeController@index')->name('maintenance');
+Route::get('/', 'Frontend\PageController@getMaintenance')->name('maintenance');
+Route::get('/home', 'Frontend\PageController@getHome')->name('home');
+Route::get('/tentang-kami', 'Frontend\PageController@getAbout')->name('about');
+Route::get('/kontak-kami', 'Frontend\PageController@getContact')->name('contact');
 
-Route::get('/home', 'Frontend\HomeController@index')->name('home');
+Route::get('/produk/{permalink?}', 'Frontend\ProductController@getProductCategory')->name('product-category');
 
-Route::get('/tentang-kami', 'Frontend\AboutController@index')->name('about');
+Route::group(['prefix'=>'layanan'], function () {
+    Route::get('/', 'Frontend\ServiceController@index')->name('service');
+    Route::get('/reservasi', 'Frontend\ServiceController@getReservation')->name('service-reservation');
+    Route::post('/reservasi/save', 'Frontend\ServiceController@saveReservation')->name('service-reservation-save');
+});
 
-Route::get('/produk/{url?}', 'Frontend\ProductController@getProductCategory')->name('product-category');
+Route::group(['prefix'=>'berita'], function () {
+    Route::get('/', 'Frontend\NewsController@index')->name('news');
+    Route::get('/detail/{permalink?}', 'Frontend\NewsController@getDetails')->name('news-details');
+});
 
-Route::get('/layanan', 'Frontend\ServiceController@index')->name('service');
 
-Route::get('/layanan/reservasi', 'Frontend\ServiceController@getReservation')->name('service-reservation');
 
-Route::post('/layanan/reservasi/save', 'Frontend\ServiceController@saveReservation')->name('service-reservation-save');
-
-Route::get('/berita', 'Frontend\NewsController@index')->name('news');
-
-Route::get('/berita/detail/{id?}', 'Frontend\NewsController@getDetails')->name('news-details');
-
-Route::get('/kontak-kami', 'Frontend\ContactController@index')->name('contact');
 
 
 

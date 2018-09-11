@@ -14,31 +14,6 @@
                     </div>
                     <div class="title">Konten</div>
                 </a>
-                <div class="dropdown-menu">
-                    <ul>
-                        <li class="dropdown">
-                            <a href="{{ url('/admin/cms/Page') }}">Halaman Informasi</a>
-                        </li>
-                    </ul>
-                </div>
-            </li>
-
-            <li class="dropdown {!! isActiveRoute(['admin.blogs']) !!}" >
-                <a href="{!! route('admin.blogs') !!}">
-                    <div class="icon">
-                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
-                    </div>
-                    <div class="title">Berita</div>
-                </a>
-            </li>
-
-            <li class="dropdown {!! isActiveRoute(['admin.bookings']) !!}" >
-                <a href="{!! route('admin.bookings') !!}">
-                    <div class="icon">
-                        <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
-                    </div>
-                    <div class="title">Reservasi</div>
-                </a>
             </li>
 
             <li class="dropdown {!! isActiveRoute(['admin.products']) !!}" >
@@ -59,6 +34,15 @@
                 </a>
             </li>
 
+            <li class="dropdown {!! isActiveRoute(['admin.bookings']) !!}" >
+                <a href="{!! route('admin.bookings') !!}">
+                    <div class="icon">
+                        <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Reservasi</div>
+                </a>
+            </li>
+
             <li class="dropdown {!! isActiveRoute(['admin.customerdetails']) !!}" >
                 <a href="{!! route('admin.customerdetails') !!}">
                     <div class="icon">
@@ -74,6 +58,24 @@
                         <i class="fa fa-address-card-o" aria-hidden="true"></i>
                     </div>
                     <div class="title">Guarantee Card</div>
+                </a>
+            </li>
+
+            <li class="dropdown {!! isActiveRoute(['admin.blogs']) !!}" >
+                <a href="{!! route('admin.blogs') !!}">
+                    <div class="icon">
+                        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Berita</div>
+                </a>
+            </li>
+
+            <li class="{!! isActiveRoute(['admin.setting']) !!}">
+                <a href="{!! route('admin.setting') !!}">
+                    <div class="icon">
+                        <i class="fa fa-gears" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Setting</div>
                 </a>
             </li>
         </ul>

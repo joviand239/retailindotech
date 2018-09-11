@@ -2,11 +2,30 @@
 
 namespace App\Entity;
 
+use App\CMSTrait\SingleImageTrait;
 use App\Entity\Base\BaseEntity;
 
 
 class Item extends BaseEntity {
+    use SingleImageTrait;
+
     protected $table = 'item';
+
+    protected $appends = [
+        'permalink',
+    ];
+
+    protected $fillable = [
+        'name',
+        'featuredImage',
+        'gallery',
+        'surfaceFinishing',
+        'typeOfScanner',
+        'microprocessor',
+        'memory',
+        'algorithm',
+        'dimension',
+    ];
 
     public function product(){
         return $this->belongsTo(Product::class, 'productId');
@@ -18,9 +37,10 @@ class Item extends BaseEntity {
 
     const FORM_DISABLED = ['url'];
 
+    const USE_META_SET = true;
+
     const FORM_TYPE = [
         'name' => 'Text',
-        'url' => 'Text',
         'featuredImage' => 'Image_1',
         'gallery' => 'Image_0',
         'surfaceFinishing' => 'Text',
@@ -64,7 +84,6 @@ class Item extends BaseEntity {
 
     const INDEX_FIELD = [
         'name',
-        'url',
     ];
 
     const FORM_LABEL = [
@@ -75,10 +94,8 @@ class Item extends BaseEntity {
 
     ];
 
-
-    function getFeaturedImageAttribute($value) {
-        if (empty($value)) return [];
-
-        return json_decode($value);
+    public function getPermalinkAttribute() {
+        return getPermalink($this->name, $this->id);
     }
+
 }

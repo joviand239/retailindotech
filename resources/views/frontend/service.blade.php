@@ -1,17 +1,17 @@
 @extends('frontend.layouts.frontend')
 
-@section('meta_title', 'Layanan')
-
-@section('meta_description', 'Layanan')
+@section('metaTitle', @$page->metaTitle)
+@section('metaDescription', @$page->metaDescription)
+@section('metaKeywords', @$page->metaKeywords)
 
 @section('content')
 
     <section id="contact">
-        <div class="page-banner" style="background: url('{!! url('/') !!}/assets/frontend/images/banner-page.jpg')">
+        <div class="page-banner" style="background: url({!! getImageUrlSize(@$page->bannerImage[0], 'full') !!})">
 
             <div class="container">
                 <h1 class="page-title">
-                    Layanan
+                    {!! @$page->bannerText !!}
                 </h1>
 
                 <hr>

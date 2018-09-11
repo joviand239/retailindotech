@@ -19,9 +19,9 @@
         <div class="row">
 
             <div class="col-md-5">
-                <img class="icon" src="{!! url('/') !!}/assets/frontend/images/logo.png" alt="{!! env('PROJECT_NAME') !!} Logo">
+                <img class="icon" src="{!! getImageUrlSize(getSettingAttribute('logo'), 'full') !!}" alt="{!! env('PROJECT_NAME') !!} Logo">
                 <p>
-                    {!! GetAboutByKey('footerSummary') !!}
+                    {!! getSettingAttribute('companyDetail') !!}
                 </p>
             </div>
 
@@ -29,7 +29,7 @@
                 <h2 class="head-title">Kantor Pusat</h2>
 
                 <p>
-                    {!! GetAboutByKey('address') !!}
+                    {!! getSettingAttribute('address') !!}
                 </p>
 
                 <table>
@@ -38,7 +38,7 @@
                             Phone.
                         </td>
                         <td class="text-right">
-                            {!! GetAboutByKey('phone') !!}
+                            {!! getSettingAttribute('phone') !!}
                         </td>
                     </tr>
 
@@ -47,7 +47,7 @@
                             Fax.
                         </td>
                         <td class="text-right">
-                            {!! GetAboutByKey('fax') !!}
+                            {!! getSettingAttribute('fax') !!}
                         </td>
                     </tr>
 
@@ -56,7 +56,7 @@
                             Email.
                         </td>
                         <td class="text-right">
-                            {!! GetAboutByKey('email') !!}
+                            {!! getSettingAttribute('email') !!}
                         </td>
                     </tr>
 
@@ -65,7 +65,7 @@
                             Website.
                         </td>
                         <td class="text-right">
-                            {!! GetAboutByKey('website') !!}
+                            {!! getSettingAttribute('website') !!}
                         </td>
                     </tr>
                 </table>
