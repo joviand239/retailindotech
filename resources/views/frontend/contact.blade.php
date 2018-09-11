@@ -30,16 +30,21 @@
                     <div class="col-md-6 col-12">
                         <h3 class="small-title">Kirim pesan kepada kami</h3>
 
-                        <form>
+                        <form action="{!! route('submitContact') !!}" method="POST" data-toggle="validator">
                             <div class="form-group">
-                                <input type="text" class="form-control custom" name="name" placeholder="Nama Lengkap">
+                                <input type="text" class="form-control custom" name="name" placeholder="Nama Lengkap" required>
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control custom" name="email" placeholder="Email">
+                                <input type="email" class="form-control custom" name="email" placeholder="Email" required>
+                                <div class="help-block with-errors"></div>
                             </div>
                             <div class="form-group">
-                                <textarea rows="5" class="form-control custom" name="message" placeholder="Pesan"></textarea>
+                                <textarea rows="5" class="form-control custom" name="message" placeholder="Pesan" required></textarea>
+                                <div class="help-block with-errors"></div>
                             </div>
+
+                            <input type="hidden" class="form-control custom" name="type" value="{!! \App\Util\Constant::CONTACT_TYPE_FORM !!}">
 
                             <div class="form-group">
                                <button class="btn secondary-btn">KIRIM</button>

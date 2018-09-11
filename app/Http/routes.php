@@ -40,6 +40,9 @@ Route::group(['prefix'=>'admin'], function () {
         Route::get('/guarantee/{guaranteeId?}/guaranteeitem/{guaranteeItemId?}', 'Admin\GuaranteeItemController@delete')->name('admin.guaranteeitem-delete');
 
 
+        // CONTACT
+        CMSCore::CRUDRoute('contact', 'contacts');
+
         // SETTING
         Route::get('/setting/{id?}', 'Admin\SettingController@details')->name('admin.setting');
         Route::post('/setting/{id?}', 'Admin\SettingController@save')->name('admin.setting.save');
@@ -67,6 +70,7 @@ Route::get('/', 'Frontend\PageController@getMaintenance')->name('maintenance');
 Route::get('/home', 'Frontend\PageController@getHome')->name('home');
 Route::get('/tentang-kami', 'Frontend\PageController@getAbout')->name('about');
 Route::get('/kontak-kami', 'Frontend\PageController@getContact')->name('contact');
+Route::post('/kontak-kami', 'Frontend\PageController@submitContact')->name('submitContact');
 
 Route::get('/produk/{permalink?}', 'Frontend\ProductController@getProductCategory')->name('product-category');
 

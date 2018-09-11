@@ -75,9 +75,10 @@
                 <h2 class="head-title">Subscribe</h2>
 
 
-                <form>
+                <form action="{!! route('submitContact') !!}" method="POST" data-toggle="validator">
                     <div class="form-group input-group">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        <input type="hidden" class="form-control custom" name="type" value="{!! \App\Util\Constant::CONTACT_TYPE_SUBSCRIBE !!}">
                         <span class="input-group-btn">
                             <button class="btn secondary-btn inline ladda-button" data-style="zoom-in" type="submit">KIRIM</button>
                        </span>

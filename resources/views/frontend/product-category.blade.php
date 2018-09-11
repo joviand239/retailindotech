@@ -107,7 +107,7 @@
                                                 </div>
 
 
-                                                <a href="#" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>
+                                                {{--<a href="#" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>--}}
 
 
                                             </div>

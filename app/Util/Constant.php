@@ -23,9 +23,15 @@ class Constant {
     const ORDER_TYPE_COLLECT = 'COLLECT';
     const ORDER_TYPE_CUSTOM = 'CUSTOM';
 
-
-
     const ATTRIBUTE_LIST = [
         ''
+    ];
+
+    const CONTACT_TYPE_FORM = 'CONTACT_FORM';
+    const CONTACT_TYPE_SUBSCRIBE = 'CONTACT_SUBSCRIBE';
+
+    const CONTACT_TYPE_LABELS = [
+        self::CONTACT_TYPE_FORM => 'Contact Form',
+        self::CONTACT_TYPE_SUBSCRIBE => 'Subscribe',
     ];
 }

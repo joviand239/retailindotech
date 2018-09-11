@@ -70,6 +70,23 @@
                 </a>
             </li>
 
+            <li class="dropdown {!! isActiveRoute(['admin.contacts']) !!}">
+                <a href="#">
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <div class="title">Contact</div>
+                </a>
+
+                <div class="dropdown-menu">
+                    <ul>
+                        <li class="dropdown">
+                            <a href="{!! route('admin.contacts') !!}">Contact Form</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
             <li class="{!! isActiveRoute(['admin.setting']) !!}">
                 <a href="{!! route('admin.setting') !!}">
                     <div class="icon">

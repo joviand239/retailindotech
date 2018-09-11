@@ -44,6 +44,18 @@ class PageController extends FrontendController {
         ]);
     }
 
+    public function submitContact() {
+        $input = Input::all();
+
+        $model = new \App\Entity\Contact();
+
+        $model->fill($input);
+
+        $model->save();
+
+        return redirect()->back()->with('success', '');
+    }
+
     public function getMaintenance() {
 
         return view('frontend.maintenance');
