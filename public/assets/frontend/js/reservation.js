@@ -1,14 +1,9 @@
 $(document).ready(function () {
     var ladda = '';
 
-    $('.ladda-button').attr('data-spinner-color', '#ffffff');
-
     // Toolbar extra buttons
     var btnFinish = $('#submitBtn')
         .on('click', function(){
-
-            ladda = Ladda.create($(this)[0]);
-            ladda.start();
 
             if( !$(this).hasClass('disabled')){
                 var elmForm = $("#reservationForm");
@@ -17,7 +12,6 @@ $(document).ready(function () {
                     elmForm.validator('validate');
                     var elmErr = elmForm.find('.has-error');
                     if(elmErr && elmErr.length > 0){
-                        ladda.stop();
                         customAlert('Ooops', 'There something wrong with the data, please check again or re input from the start!', 'warning')
                     }else{
 

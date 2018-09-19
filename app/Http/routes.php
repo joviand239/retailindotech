@@ -66,8 +66,8 @@ Route::group(['middleware' => ['authweb'], 'roles'=>['CUSTOMER', 'CUSTOMERBIZ'],
 });
 
 
-Route::get('/', 'Frontend\PageController@getMaintenance')->name('maintenance');
-Route::get('/home', 'Frontend\PageController@getHome')->name('home');
+Route::get('/maintenance', 'Frontend\PageController@getMaintenance')->name('maintenance');
+Route::get('/', 'Frontend\PageController@getHome')->name('home');
 Route::get('/tentang-kami', 'Frontend\PageController@getAbout')->name('about');
 Route::get('/kontak-kami', 'Frontend\PageController@getContact')->name('contact');
 Route::post('/kontak-kami', 'Frontend\PageController@submitContact')->name('submitContact');

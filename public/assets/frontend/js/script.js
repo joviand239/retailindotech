@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    $('.ladda-button').attr('data-spinner-color', '#009688');
-    $( '.ladda-button' ).ladda( 'bind', { timeout: 2000 } );
+    /*$('.ladda-button').attr('data-spinner-color', '#009688');
+    $( '.ladda-button' ).ladda( 'bind', { timeout: 2000 } );*/
 
 
     $("#home-slider").lightSlider({
