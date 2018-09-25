@@ -16,7 +16,7 @@
                     <a class="nav-link dropbtn" role="button">Produk</a>
                     <div class="dropdown-content">
                         @foreach(getProductMenu() as $item)
-                            <a class="dropdown-item" href="{!! route('product-category', ['url' => @$item->url]) !!}">{!! @$item->name !!}</a>
+                            <a class="dropdown-item" href="{!! route('product-category', ['permalink' => @$item->permalink]) !!}">{!! @$item->name !!}</a>
                         @endforeach
                     </div>
                 </li>

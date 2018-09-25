@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\URL;
 
-class CustomerDetailController extends Controller {
+class CustomerdetailController extends Controller {
     public function index() {
         return view('admin.customerdetail.index', ['list'=>CustomerDetail::all(), 'model'=>CustomerDetail::class]);
     }

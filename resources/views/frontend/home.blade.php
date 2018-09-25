@@ -127,13 +127,13 @@
                                 </div>
 
                                 <div class="detail-wrapper">
-                                    <a href="{!! route('product-category', ['url' => @$item->url]) !!}">
+                                    <a href="{!! route('product-category', ['permalink' => @$item->permalink]) !!}">
                                         <h3 class="title">{!! @$item->name !!}</h3>
                                     </a>
                                     <p class="descriptionn">
                                         {!! @$item->summary !!}
                                     </p>
-                                    <a href="{!! route('product-category', ['url' => @$item->url]) !!}" class="btn secondary-btn">LIHAT</a>
+                                    <a href="{!! route('product-category', ['permalink' => @$item->permalink]) !!}" class="btn secondary-btn">LIHAT</a>
                                 </div>
                             </div>
                         </div>
