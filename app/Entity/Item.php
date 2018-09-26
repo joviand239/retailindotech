@@ -82,6 +82,10 @@ class Item extends BaseEntity {
         'software' => 'Text',*/
     ];
 
+    const FORM_REQUIRED = [
+        'name',
+    ];
+
     const INDEX_FIELD = [
         'name',
     ];
