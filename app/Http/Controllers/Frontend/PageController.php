@@ -7,6 +7,7 @@ use App\Entity\CMS\About;
 use App\Entity\CMS\Contact;
 use App\Entity\CMS\Home;
 use App\Entity\Product;
+use App\Service\MailerService;
 use Illuminate\Support\Facades\Input;
 
 
@@ -52,6 +53,8 @@ class PageController extends FrontendController {
         $model->fill($input);
 
         $model->save();
+
+        MailerService::contact($model);
 
         return redirect()->back()->with('success', '');
     }

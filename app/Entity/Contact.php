@@ -18,13 +18,15 @@ class Contact extends BaseEntity {
         'email' => 'Text',
         'message' => 'TextArea',
         'type' => 'Text',
+        'createdAt' => 'Date',
     ];
 
     const FORM_DISABLED = [
         'name',
         'email',
         'message',
-        'type'
+        'type',
+        'createdAt'
     ];
 
     const INDEX_FIELD = [
@@ -32,6 +34,7 @@ class Contact extends BaseEntity {
         'email',
         'message',
         'type',
+        'createdAt'
     ];
     const FORM_SELECT_LIST = [
 
