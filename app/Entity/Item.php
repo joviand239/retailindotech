@@ -25,6 +25,7 @@ class Item extends BaseEntity {
         'memory',
         'algorithm',
         'dimension',
+        'linkDetail'
     ];
 
     public function product(){
@@ -49,6 +50,7 @@ class Item extends BaseEntity {
         'memory' => 'Text',
         'algorithm' => 'Text',
         'dimension' => 'Text',
+        'linkDetail' => 'Text',
         /*'storageFingerprint' => 'Text',
         'storageCard' => 'Text',
         'storageTransaction' => 'Text',

@@ -29,13 +29,17 @@ class Blog extends BaseEntity {
     const USE_META_SET = true;
 
     const FORM_TYPE = [
-        'publishDate' => 'date',
+        'publishDate' => 'Date',
         'title' => 'Text',
         'summary' => 'TextArea',
         'featuredImage' => 'Image_1',
         'gallery' => 'Image_0',
         'content' => 'Wysiwyg',
         'source' => 'Text',
+    ];
+
+    const FORM_REQUIRED = [
+        'title',
     ];
 
     const INDEX_FIELD = [

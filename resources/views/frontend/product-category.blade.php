@@ -107,7 +107,9 @@
                                                 </div>
 
 
-                                                {{--<a href="#" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>--}}
+                                                @if(@$item->linkDetail)
+                                                    <a target="_blank" href="{!! @$item->linkDetail !!}" class="link-btn">Lihat Detail <i class="fa fa-long-arrow-right"></i></a>
+                                                @endif
 
 
                                             </div>
