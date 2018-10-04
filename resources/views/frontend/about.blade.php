@@ -30,7 +30,7 @@
 
                 <div class="row">
                     <div class="col-md-6 col-12">
-                        <h1 class="title">Tentang RetailIndo Tech</h1>
+                        <h1 class="title">Tentang Retailindotech</h1>
 
                         <hr class="sec-small">
 

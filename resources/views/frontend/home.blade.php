@@ -92,8 +92,7 @@
                     <div class="col-md-5 col-12">
                         <h1 class="about-title">
                             Tentang<br>
-                            Retail Indo<br>
-                            Tech
+                            Retailindotech
                         </h1>
                     </div>
                     <div class="col-md-1 col-12">
