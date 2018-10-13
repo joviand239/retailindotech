@@ -4,7 +4,7 @@
             <img src="{!! getImageUrlSize(getSettingAttribute('logo'), 'full') !!}" alt="Logo Retail Indo Tech">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa fa-bars menu-icon"></i>
         </button>
 
         <div class="collapse navbar-collapse" id="main-navbar">

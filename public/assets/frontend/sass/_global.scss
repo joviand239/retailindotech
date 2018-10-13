@@ -96,6 +96,11 @@ hr {
     }
   }
 
+  .navbar-toggler {
+    font-size: 24px;
+    color: $main-color;
+  }
+
   .navbar-nav {
 
     .nav-link {
@@ -418,6 +423,22 @@ hr {
     background: $secondary-color;
     border: 1px solid $secondary-color;
     color: white;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .slider {
+    .item {
+      .box {
+        min-height: auto;
+      }
+
+      .box-container {
+        width: 100%;
+        padding: 75px 0px;
+      }
+    }
   }
 }
 
