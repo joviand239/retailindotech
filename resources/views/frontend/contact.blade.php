@@ -54,6 +54,12 @@
                     </div>
 
                     <div class="col-md-6 col-12">
+                        <h3 class="small-title">Informasi Kontak</h3>
+
+                        <div class="contact-info-wrapper">
+                            {!! getSettingAttribute('contactInformation') !!}
+                        </div>
+
                         <h3 class="small-title">Kunjungi kantor kami</h3>
 
                         {!! getSettingAttribute('googleMap') !!}

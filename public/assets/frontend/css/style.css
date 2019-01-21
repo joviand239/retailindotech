@@ -437,6 +437,26 @@ hr {
 .sw-theme-circles > ul.step-anchor > li.done > a:after {
   border-left: 30px solid #00598d !important; }
 
+.contact-info-wrapper {
+  margin-bottom: 30px; }
+  .contact-info-wrapper p {
+    font-weight: 700;
+    margin-bottom: 0px; }
+  .contact-info-wrapper a {
+    color: #007bff;
+    font-weight: 500; }
+  .contact-info-wrapper table {
+    margin-bottom: 15px;
+    width: 100%;
+    border: none; }
+    .contact-info-wrapper table tr td {
+      border: none;
+      padding: 0px; }
+      .contact-info-wrapper table tr td:first-of-type {
+        color: #a8d377;
+        width: 25%;
+        min-width: 25%; }
+
 #home .banner {
   position: relative; }
   #home .banner .lSSlideOuter .lSPager.lSpg {

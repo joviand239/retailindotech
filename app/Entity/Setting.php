@@ -30,6 +30,7 @@ class Setting extends BaseEntity {
         'instagram' => 'Text',
         'contactEmail' => 'Text',
         'googleMap' => 'TextArea',
+        'contactInformation' => 'Wysiwyg',
     ];
 
     const FORM_LABEL_HELP = [
