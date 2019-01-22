@@ -149,6 +149,8 @@ hr {
   #footer-top .head-title {
     margin-bottom: 20px;
     color: #a8d377; }
+  #footer-top .contact-info-wrapper table tr td:first-of-type {
+    width: 50%; }
 
 #footer-btm {
   padding: 15px;

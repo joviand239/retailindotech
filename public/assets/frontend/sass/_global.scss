@@ -144,6 +144,10 @@ hr {
     margin-bottom: 20px;
     color: $secondary-color;
   }
+
+  .contact-info-wrapper table tr td:first-of-type {
+    width: 50%;
+  }
 }
 
 #footer-btm {

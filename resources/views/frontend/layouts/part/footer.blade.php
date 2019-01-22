@@ -20,9 +20,22 @@
 
             <div class="col-md-5">
                 <img class="icon" src="{!! getImageUrlSize(getSettingAttribute('logo'), 'full') !!}" alt="{!! env('PROJECT_NAME') !!} Logo">
-                <p>
+                <p class="mb-30">
                     {!! getSettingAttribute('companyDetail') !!}
                 </p>
+
+                <h2 class="head-title">Subscribe</h2>
+
+
+                <form action="{!! route('submitContact') !!}" method="POST" data-toggle="validator">
+                    <div class="form-group input-group">
+                        <input type="email" class="form-control" name="email" placeholder="Email" required>
+                        <input type="hidden" class="form-control custom" name="type" value="{!! \App\Util\Constant::CONTACT_TYPE_SUBSCRIBE !!}">
+                        <span class="input-group-btn">
+                            <button class="btn secondary-btn inline ladda-button" data-style="zoom-in" type="submit">KIRIM</button>
+                       </span>
+                    </div>
+                </form>
             </div>
 
             <div class="col-md-3">
@@ -72,20 +85,11 @@
             </div>
 
             <div class="col-md-4">
-                <h2 class="head-title">Subscribe</h2>
+                <h2 class="head-title">Informasi Kontak</h2>
 
-
-                <form action="{!! route('submitContact') !!}" method="POST" data-toggle="validator">
-                    <div class="form-group input-group">
-                        <input type="email" class="form-control" name="email" placeholder="Email" required>
-                        <input type="hidden" class="form-control custom" name="type" value="{!! \App\Util\Constant::CONTACT_TYPE_SUBSCRIBE !!}">
-                        <span class="input-group-btn">
-                            <button class="btn secondary-btn inline ladda-button" data-style="zoom-in" type="submit">KIRIM</button>
-                       </span>
-                    </div>
-                </form>
-
-
+                <div class="contact-info-wrapper">
+                    {!! getSettingAttribute('contactInformation') !!}
+                </div>
 
             </div>
         </div>

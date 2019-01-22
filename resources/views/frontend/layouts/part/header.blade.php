@@ -21,6 +21,9 @@
                     </div>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{!! url('/') !!}/produk/TimeTec-Cloud-System-7">TimeTec Cloud System</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{!! route('service') !!}">Layanan</a>
                 </li>
                 <li class="nav-item">

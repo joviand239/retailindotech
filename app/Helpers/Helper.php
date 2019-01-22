@@ -239,7 +239,7 @@ function GetProductList() {
 
 
 function getProductMenu() {
-    $product = Product::all();
+    $product = Product::where('id', '!=', 7)->get();
 
     return $product;
 }
