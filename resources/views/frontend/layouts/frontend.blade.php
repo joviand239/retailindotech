@@ -28,6 +28,19 @@
 
     @include('frontend.layouts.part.modal')
 
+    <div class="floating-share">
+        <div id="btn-share"></div>
+
+        <ul class="share-list">
+            <li class="item facebook-share">
+                <i class="fa fa-facebook"></i>
+            </li>
+            <li class="item twitter-share">
+                <i class="fa fa-twitter"></i>
+            </li>
+        </ul>
+    </div>
+
     @include('frontend.layouts.part.js')
 
     @yield('jsCustom')

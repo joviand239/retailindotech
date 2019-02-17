@@ -431,6 +431,126 @@ hr {
 }
 
 
+.floating-share {
+  position: fixed;
+  left: 15px;
+  bottom: 20px;
+  z-index: 999;
+
+
+  #btn-share {
+    cursor: pointer;
+    background: #ff6969;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    border-radius: 100%;
+    @extend .display-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 999;
+
+    &:after {
+      content: '\f064';
+      font-family: FontAwesome;
+      -webkit-animation: rotateIconReverse 1s forwards; /* Safari 4.0 - 8.0 */
+      -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+      animation: rotateIconReverse 1s forwards;
+    }
+
+    &.active {
+      &:after {
+        -webkit-animation: rotateIcon 1s forwards; /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
+        animation: rotateIcon 1s forwards;
+      }
+    }
+  }
+
+  @-webkit-keyframes rotateIconReverse {
+    from {
+      transform: rotate(-300deg);
+    }
+    to {
+      content: '\f064';
+    }
+  }
+
+  @keyframes rotateIconReverse {
+    from {
+      transform: rotate(-300deg);
+    }
+    to {
+      content: '\f064';
+    }
+  }
+
+  @-webkit-keyframes rotateIcon {
+    from {
+      transform: rotate(300deg);
+    }
+    to {
+      content: '\f00d';
+    }
+  }
+
+  @keyframes rotateIcon {
+    from {
+      transform: rotate(300deg);
+    }
+    to {
+      content: '\f00d';
+    }
+  }
+
+  .share-list {
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    height: 100%;
+    @extend .display-flex;
+
+    .item {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      background: #ff6969;
+      color: white;
+      @extend .display-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      left: 0px;
+      @include transition(all, 0.5s, ease);
+
+      &:last-of-type {
+        margin-right: 0px;
+      }
+    }
+
+    &.active {
+      .item {
+        &:nth-child(1){
+          left: 60px;
+        }
+
+        &:nth-child(2){
+          left: 105px;
+        }
+      }
+    }
+  }
+}
+
+
 @media screen and (max-width: 500px) {
   .slider {
     .item {
