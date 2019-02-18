@@ -28,15 +28,23 @@
 
     @include('frontend.layouts.part.modal')
 
-    <div class="floating-share">
+    <div class="floating-share active">
         <div id="btn-share"></div>
 
-        <ul class="share-list">
-            <li class="item facebook-share">
-                <i class="fa fa-facebook"></i>
+        <ul class="share-list active">
+            <li class="item mail-share">
+                <a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site {!! url()->current() !!}">
+                    <i class="fa fa-envelope"></i>
+                </a>
             </li>
             <li class="item twitter-share">
                 <i class="fa fa-twitter"></i>
+            </li>
+            <li class="item facebook-share">
+                <i class="fa fa-facebook"></i>
+            </li>
+            <li class="item whatsapp-share d-sm-none">
+                <i class="fa fa-whatsapp"></i>
             </li>
         </ul>
     </div>

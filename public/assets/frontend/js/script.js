@@ -32,7 +32,7 @@ function postToFeed(title, desc, url){
 
 $(document).ready(function () {
     var metaTitle = encodeURIComponent($(document).find("title").text());
-    var metaDescription = $('meta[name=description]').attr("content");
+    var metaDescription = encodeURIComponent($('meta[name=description]').attr("content"));
 
 
     var twitterBtn = document.querySelector('.twitter-share');
@@ -51,6 +51,20 @@ $(document).ready(function () {
 
         return false;
     });
+
+
+    $('.whatsapp-share').click(function () {
+        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            var sMsg = metaTitle + " - " + encodeURIComponent(location.href);
+            var whatsapp_url = "whatsapp://send?text=" + sMsg;
+            window.location.href = whatsapp_url;
+        }
+        else {
+            alert("Whatsapp client not available.");
+        }
+    });
+
+
 
     /*$('.ladda-button').attr('data-spinner-color', '#009688');
     $( '.ladda-button' ).ladda( 'bind', { timeout: 2000 } );*/

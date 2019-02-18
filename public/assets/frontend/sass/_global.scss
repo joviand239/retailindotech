@@ -453,7 +453,7 @@ hr {
     z-index: 999;
 
     &:after {
-      content: '\f064';
+      content: '';
       font-family: FontAwesome;
       -webkit-animation: rotateIconReverse 1s forwards; /* Safari 4.0 - 8.0 */
       -webkit-animation-delay: 1s; /* Safari 4.0 - 8.0 */
@@ -471,37 +471,42 @@ hr {
 
   @-webkit-keyframes rotateIconReverse {
     from {
-      transform: rotate(-300deg);
+      content: '\f1e0';
+      transform: rotate(300deg);
     }
     to {
-      content: '\f064';
+      content: '\f00d';
     }
   }
 
   @keyframes rotateIconReverse {
     from {
-      transform: rotate(-300deg);
+      content: '\f1e0';
+      transform: rotate(300deg);
     }
     to {
-      content: '\f064';
+      content: '\f00d';
+
     }
   }
 
   @-webkit-keyframes rotateIcon {
     from {
+      content: '\f00d';
       transform: rotate(300deg);
     }
     to {
-      content: '\f00d';
+      content: '\f1e0';
     }
   }
 
   @keyframes rotateIcon {
     from {
+      content: '\f00d';
       transform: rotate(300deg);
     }
     to {
-      content: '\f00d';
+      content: '\f1e0';
     }
   }
 
@@ -512,12 +517,14 @@ hr {
     position: absolute;
     top: 0px;
     height: 100%;
+    width: 100%;
     @extend .display-flex;
 
     .item {
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, 50%);
       cursor: pointer;
       width: 35px;
       height: 35px;
@@ -528,8 +535,23 @@ hr {
       align-items: center;
       justify-content: center;
       margin-right: 10px;
-      left: 0px;
       @include transition(all, 0.5s, ease);
+
+      a {
+        color: white;
+      }
+
+      &.facebook-share {
+        background: #3b5998;
+      }
+
+      &.twitter-share {
+        background: #00acee;
+      }
+
+      &.whatsapp-share {
+        background: #25D366;
+      }
 
       &:last-of-type {
         margin-right: 0px;
@@ -539,11 +561,19 @@ hr {
     &.active {
       .item {
         &:nth-child(1){
-          left: 60px;
+          bottom: 75px;
         }
 
         &:nth-child(2){
-          left: 105px;
+          bottom: 115px;
+        }
+
+        &:nth-child(3){
+          bottom: 155px;
+        }
+
+        &:nth-child(4){
+          bottom: 195px;
         }
       }
     }
